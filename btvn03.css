@@ -1,0 +1,95 @@
+:root{
+    --color1:#fe6d3f;
+    --color2:#ef5321;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+.card{
+    font-family: Roboto,sans-serif ;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 4px;
+}
+
+.year{
+    background-color: var(--color2);
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+}
+
+.year p{
+    margin: 0;
+    height: 100%;
+    padding-top: 7px;
+}
+.date{
+    background-color: #fe6d3f;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    height: 130px;
+}
+
+.date-day{
+    font-size: 2.5rem;
+    line-height: 40px;
+    margin: 0;
+    height: 50px;
+    padding-top: 25px;
+}
+
+.date p{
+    line-height: 24px;
+    margin-left: 0px;
+}
+
+.info{
+   background-color:  #d5c8c859;
+}
+.info-a{
+    display: block;
+    color: #464646;
+    text-decoration: none;
+    font-size: 1.3rem;
+    height: 23px;
+}
+
+.far.fa-calendar-alt{
+    color: #757575;
+}
+
+.fas.fa-clock{
+    color: #757575;
+}
+
+.fas.fa-map-marker-alt{
+    color: #757575;
+}
+
+.info span{
+    color: #464646;
+}
+
+button{
+    border: none;
+    color: #3c78e8;
+    cursor: pointer;
+}
+
+.info-p3{
+    border-bottom: 1px solid #c4c4c4e3;
+    height: 35px;
+}
+
+.info a,p,button{
+    margin-left: 20px;
+}
