@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+
+}
+
+body{
+    margin: 0;
+    background-color:  #f4f7fa;
+}
+
+a {
+    text-decoration: none;
+}
+
+.back{
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.back a {
+    background-color: #1ac91a;
+    position: relative;
+    top: 23px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.course-descripcion{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    overflow: hidden;
+    margin: 10px 30px 30px 30px;
+}
+
+.tittle h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 30px;
+}
+h3{
+    font-size: 1.5rem;
+    color: rgb(70, 70, 70);
+    margin-left: 10px;
+}
+
+.course-descripcion li{
+    color: rgb(70, 70, 70);
+    margin-bottom: 8px;
+}
+
+p{
+    margin-left: 20px;
+    color: rgb(70, 70, 70);
+}
+
+/* css footer */
+.footer ul{
+    list-style: none;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+i{
+    font-size: 2rem;
+}
+
+.footer{
+    display: flex;
+    font-size: 14px;
+    line-height: 2.5rem;
+    background-color: #30598c;
+    color:#fff;
+}
