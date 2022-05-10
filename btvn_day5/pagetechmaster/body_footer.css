@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+.footer ul{
+    list-style: none;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+i{
+    font-size: 2rem;
+}
+.footer{
+    display: flex;
+    font-family: Roboto,sans-serif;
+    font-size: 14px;
+    line-height: 2.5rem;
+    background-color: #30598c;
+    color:#fff;
+    padding: 15px;
+}
+
+.footer-item{
+    flex-basis: 25%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* CSS card */
+.card img {
+    max-width: 100%;
+    display: block;
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.card {
+    width: 320px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-basis: 33%;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content h2 {
+    font-size: 19px;
+    font-weight: 400;
+    color: #464646;
+}
+
+.content p {
+    font-size: 14px;
+    font-weight: 100;
+    color: #757575;
+}
+
+.content p span {
+    color: #ffd600;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.fa-solid  {
+    font-size: 1rem;
+}
+
+.card-container{
+    width: 1200px;
+    margin: auto;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+
