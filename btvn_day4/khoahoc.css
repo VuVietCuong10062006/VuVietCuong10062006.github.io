@@ -40,6 +40,7 @@ img {
     max-width: 100%;
     display: block;
     height: 250px;
+    width: 400px;
     object-fit: cover;
 }
 
@@ -87,4 +88,7 @@ img {
     justify-content: space-between;
 }
 
+.card a {
+    text-decoration: none;
+}
 
