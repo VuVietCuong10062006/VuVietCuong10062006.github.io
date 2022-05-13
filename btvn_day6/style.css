@@ -1,0 +1,135 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    transition: all 1s;   
+    position: absolute;
+    transform: scale(1.2);
+    filter: blur(0); 
+}
+
+.tag{
+    position: absolute;
+    left: 0;
+    bottom: 135px;
+    font-size: 14px;
+    background-color: tomato;
+    padding: 5px;
+    transition: all 1s;
+}
+
+.time{
+    position: absolute;
+    background-color: tomato;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+}
+
+.card {
+    width: 320px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    overflow: hidden;
+
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+}
+
+.image img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+.content {
+    padding: 16px;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 30%;
+    transition: all 1s;
+    /* transform: translateY(131px); */
+    
+}
+
+.card:hover .content{
+    /* transform: translateY(0); */
+    height: 60%;
+}
+.card:hover img{
+    /* height: 40% */
+    transform: scale(1);
+    filter: blur(5px); 
+    
+}
+.content h2 {
+    font-size: 19px;
+    font-weight: 400;
+    color: #464646;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.content h4{
+    font-weight: 400;
+    color: brown;
+    margin: 0;
+}
+.content p {
+    font-size: 14px;
+    font-weight: 100;
+    color: #757575;
+}
+
+.content p span {
+    color: #757575;
+}
+
+.info {
+    display: flex;
+    /* justify-content: space-between; */
+    position: absolute;
+    bottom: 0;
+}
+ .info p {
+     margin: 20px 5px 20px 0;
+ }
+
+.lorem{
+    display: none;
+    line-height: 25px;
+    /* transform: translateY(-80px); */
+}
+
+.card:hover .lorem{
+    display: block;
+    margin:15px 0 28px 0 ;
+    /* transform: translateY(0); */
+}
+
+.card:hover .tag{
+    transform: translateY(-135px);
+}
+
