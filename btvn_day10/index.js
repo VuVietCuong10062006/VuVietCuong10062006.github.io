@@ -15,7 +15,9 @@ function divisible(a) {
 
 }
 
-// divisible(15)
+divisible(45)
+divisible(9)
+divisible(25)
 
 //bai2
 
@@ -34,7 +36,9 @@ function equation1(a,b){
     }
 }
 
-// equation1(2,3)
+equation1(0,0)
+equation1(0,3)
+equation1(2,3)
 
 //bai3
 
@@ -66,7 +70,12 @@ function equation2(a,b,c){
     }
 }
 
-// equation2(1,5,1)
+equation2(0,0,0)
+equation2(0,0,5)
+equation2(0,5,1)
+equation2(1,1,1)
+equation2(1,2,1)
+equation2(1,5,1)
 
 // bai4
 
@@ -88,7 +97,11 @@ function year(year){
     }
 }
 
-// year(2022)
+year(2022)
+year(2000)
+year(1900)
+year(1924)
+
 
 // bai5
 
@@ -97,7 +110,7 @@ function bmi(weight,height) {
     return console.log(bmi)
 }
 
-// bmi(100,200)
+bmi(100,200)
 
 // bai6
 function fahrenheit(c) {
@@ -105,4 +118,4 @@ function fahrenheit(c) {
     return console.log(f)
 }
 
-// fahrenheit(100)
+fahrenheit(100)
