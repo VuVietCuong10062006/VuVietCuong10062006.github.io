@@ -60,12 +60,11 @@ function sort(int = 1){
                 let temp = str[0]
                 str[0]=str[i]
                 str[i]=temp
-                console.log(str[0])
                 return str.join('')*1
             }
         }
     }
-    return str*1
+    return str.join('')*1
 }
 
 console.log(sort(203950))
