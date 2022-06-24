@@ -2,6 +2,7 @@
 const btn = document.getElementById('btn')
 const image = document.getElementById('image')
 const select = document.getElementById('breed-list')
+const ulEle = document.querySelector('.sub-breed-list')
 
 let getBreedList = async () =>{
     try{
@@ -10,9 +11,10 @@ let getBreedList = async () =>{
         btn.addEventListener('click',(e) =>{
             let a = select.value
             if(res.data.message[a].length == 0){
-                btn.insertAdjacentHTML('afterend',`<ul>
-            <li>Không có sub breed </li>
-            </ul>`)
+                ulEle.innerHTML = ''
+                ulEle.insertAdjacentHTML('beforeend',`
+                <li>Không có sub breed </li>
+            `)
             } else{
                 getSubBreed()
             }
@@ -38,9 +40,9 @@ let getSubBreed = async () =>{
         let res = await axios.get("https://dog.ceo/api/breed/hound/list")  
         let a = res.data.message
         a.forEach((e) =>{
-            btn.insertAdjacentHTML('afterend',`<ul>
+            ulEle.insertAdjacentHTML('beforeend',`
             <li onclick ='randomImage()'>${e}</li>
-        </ul>`)
+        `)
         })      
     } catch(error){
         console.log(error)
