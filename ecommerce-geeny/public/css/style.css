@@ -1,6 +1,7 @@
 
 @import url("./shop.css");
 @import url("./detail.css");
+@import url("./about.css");
 /* header */
 .header{
     background-color: #fff;
