@@ -3,6 +3,7 @@
 @import url("./detail.css");
 @import url("./about.css");
 @import url("./blog.css");
+@import url("./contact.css");
 /* header */
 .header{
     background-color: #fff;
