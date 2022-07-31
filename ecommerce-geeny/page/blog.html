@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- Link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link slick -->
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Link css -->
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/base.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="header-content">
+              <a href="../index.html" class="header-logo">
+                <img src="../public/image/logo/logo.png" alt="Logo">
+              </a>
+    
+              <a href="" class="header-account">
+                <img src="../public/image/logo/user.png" alt="Account">
+                <p>Cường</p>
+              </a>
+    
+              <div class="header-search">
+                <input type="text" placeholder="Tìm Kiếm">
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+    
+              <div class="header-group">
+                <a href="" class="header-wish">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+                <a href="" class="header-cart">
+                  <i class="fa-solid fa-basket-shopping"></i>
+                  <div class="header-cart-number">
+                    <p>1</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-bot">
+          <div class="container">
+            <div class="navbar-content">
+                <ul class="navbar-list">
+                  <li class="navbar-item">
+                    <a href="">Trang Chủ</a>
+                  </li>
+                  <li class="navbar-item dropdown">
+                    <a href="" class="dropdown-toggle">Sản Phẩm</a>
+                    <ul class="dropdown-list">
+                      <li>
+                        <a href="">Rau</a>
+                      </li>
+                      <li>
+                        <a href="">Quả</a>
+                      </li>
+                      <li>
+                        <a href="">Thịt</a>
+                      </li>
+                      <li>
+                        <a href="">Đồ Ăn Nhanh</a>
+                      </li>
+                      <li>
+                        <a href="">Đồ Uống</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="">Giới Thiệu</a>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="">Tin Tức</a>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="">Liên Hệ</a>
+                  </li>
+                </ul>
+                <div class="navbar-info-group">
+                  <div class="navbar-info">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>
+                      <small>Số Điện Thoại</small>
+                      <span>0336294777</span>
+                    </p>
+                  </div>
+                  <div class="navbar-info">
+                    <i class="fa-solid fa-at"></i>
+                    <p>
+                      <small>Email</small>
+                      <span>support@example.com</span>
+                    </p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <section class="shop-banner">
+        <div class="container">
+            <h2>Tin Tức</h2>
+            <ol class="content">
+                <li class="content-item">Trang chủ</li>
+                <li class="content-item active">Tin Tức</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="blogs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="filter-short">
+                                <label for="">Short by :</label>
+                                <select>
+                                    <option value="1">default</option>
+                                    <option value="2">recent</option>
+                                    <option value="3">featured</option>
+                                    <option value="4">recommend</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blogs-card">
+                                <div class="blogs-image">
+                                    <img src="../public/image/blog/blog-1.jpg" alt="">
+                                </div>
+                                <div class="blogs-content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>admin</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span> FEBRUARY 02, 2021</span>
+                                        </li>
+                                    </ul>
+                                    <h4>Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</h4>
+                                    <p>rong bữa cơm nhà mà có món tôm rim mằn mặn, đậm đà thì chắc là nồi cơm sẽ hết lúc nào không hay </p>
+                                    <a href="">
+                                        <span>read more</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blogs-card">
+                                <div class="blogs-image">
+                                    <img src="../public/image/blog/blog-1.jpg" alt="">
+                                </div>
+                                <div class="blogs-content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>admin</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span> FEBRUARY 02, 2021</span>
+                                        </li>
+                                    </ul>
+                                    <h4>Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</h4>
+                                    <p>rong bữa cơm nhà mà có món tôm rim mằn mặn, đậm đà thì chắc là nồi cơm sẽ hết lúc nào không hay </p>
+                                    <a href="">
+                                        <span>read more</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blogs-card">
+                                <div class="blogs-image">
+                                    <img src="../public/image/blog/blog-1.jpg" alt="">
+                                </div>
+                                <div class="blogs-content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>admin</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span> FEBRUARY 02, 2021</span>
+                                        </li>
+                                    </ul>
+                                    <h4>Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</h4>
+                                    <p>rong bữa cơm nhà mà có món tôm rim mằn mặn, đậm đà thì chắc là nồi cơm sẽ hết lúc nào không hay </p>
+                                    <a href="">
+                                        <span>read more</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blogs-card">
+                                <div class="blogs-image">
+                                    <img src="../public/image/blog/blog-1.jpg" alt="">
+                                </div>
+                                <div class="blogs-content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>admin</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span> FEBRUARY 02, 2021</span>
+                                        </li>
+                                    </ul>
+                                    <h4>Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</h4>
+                                    <p>rong bữa cơm nhà mà có món tôm rim mằn mặn, đậm đà thì chắc là nồi cơm sẽ hết lúc nào không hay </p>
+                                    <a href="">
+                                        <span>read more</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blogs-card">
+                                <div class="blogs-image">
+                                    <img src="../public/image/blog/blog-1.jpg" alt="">
+                                </div>
+                                <div class="blogs-content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>admin</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span> FEBRUARY 02, 2021</span>
+                                        </li>
+                                    </ul>
+                                    <h4>Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</h4>
+                                    <p>rong bữa cơm nhà mà có món tôm rim mằn mặn, đậm đà thì chắc là nồi cơm sẽ hết lúc nào không hay </p>
+                                    <a href="">
+                                        <span>read more</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blogs-card">
+                                <div class="blogs-image">
+                                    <img src="../public/image/blog/blog-1.jpg" alt="">
+                                </div>
+                                <div class="blogs-content">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>admin</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            <span> FEBRUARY 02, 2021</span>
+                                        </li>
+                                    </ul>
+                                    <h4>Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</h4>
+                                    <p>rong bữa cơm nhà mà có món tôm rim mằn mặn, đậm đà thì chắc là nồi cơm sẽ hết lúc nào không hay </p>
+                                    <a href="">
+                                        <span>read more</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="shop-paginate">
+                                <p>Hiển Thị 12 Trên 60 Kết Quả</p>
+                                <ul class="pagination">
+                                    <li class="pagination-item">
+                                        <a href="">
+                                            <i class="fa-solid fa-arrow-left-long"></i>
+                                        </a>
+                                    </li>
+                                    <li class="pagination-item">
+                                        <a class=" active" href="">1</a>
+                                    </li>
+                                    <li class="pagination-item">
+                                        <a href="">2</a>
+                                    </li>
+                                    <li class="pagination-item">
+                                        <a href="">3</a>
+                                    </li>
+                                    <li class="pagination-item">
+                                        ...
+                                    </li>
+                                    <li class="pagination-item">
+                                        <a href="">60</a>
+                                    </li>
+                                    <li class="pagination-item">
+                                        <a href="">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blogs-widget">
+                        <h3 class="bolgs-widget-title">Tìm Blog</h3>
+                        <form class="blogs-widget-form">
+                            <input type="text" placeholder="Search blogs">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="blogs-widget">
+                        <h3 class="bolgs-widget-title">Bài Viết Nổi Bật</h3>
+                        <ul class="blogs-widget-featured">
+                            <li>
+                                <a href=""><img src="../public/image/blog/blog-1.jpg" alt=""></a>
+                                <h6>
+                                    <a href="">Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</a>
+                                    <span>tháng 2 năm 2021</span>
+                                </h6>
+                            </li>
+                            <li>
+                                <a href=""><img src="../public/image/blog/blog-1.jpg" alt=""></a>
+                                <h6>
+                                    <a href="">Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</a>
+                                    <span>tháng 2 năm 2021</span>
+                                </h6>
+                            </li>
+                            <li>
+                                <a href=""><img src="../public/image/blog/blog-1.jpg" alt=""></a>
+                                <h6>
+                                    <a href="">Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</a>
+                                    <span>tháng 2 năm 2021</span>
+                                </h6>
+                            </li>
+                            <li>
+                                <a href=""><img src="../public/image/blog/blog-1.jpg" alt=""></a>
+                                <h6>
+                                    <a href="">Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</a>
+                                    <span>tháng 2 năm 2021</span>
+                                </h6>
+                            </li>
+                            <li>
+                                <a href=""><img src="../public/image/blog/blog-1.jpg" alt=""></a>
+                                <h6>
+                                    <a href="">Cách làm tôm rim ngon nức lòng chỉ với 3 bước cực đơn giản</a>
+                                    <span>tháng 2 năm 2021</span>
+                                </h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="blogs-widget">
+                        <h3 class="bolgs-widget-title">Chia sẻ Blog</h3>
+                        <ul class="blogs-widget-social">
+                            <li>
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-widget">
+                <a class="footer-logo" href="">
+                  <img src="../public/image/logo/logo.png" alt="">
+                </a>
+                <p>Tên công ty: CÔNG TY CỔ PHẦN ĐẦU TƯ ORGANICA</p>
+                <p>Mã Số thuế: 0311428380</p>
+                <ul class="footer-social">
+                  <li>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-pinterest-p"></i></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-contact">
+                <h3 class="footer-title">Liên Hệ Chúng Tôi</h3>
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-at"></i>
+                    <p>
+                      <span>support@example.com</span>
+                      <span>carrer@example.com</span>
+                    </p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>
+                      <span>0336294777</span>
+                      <span>0336294777</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-links">
+                <h3 class="footer-title">Đường Dẫn Nhanh</h3>
+                <a href="">Phạm Thị Mẫn - 0963023185</a>
+                <a href="">manpham@techmaster.vn</a>
+                <a href="">Dương Đức Thịnh - 0987273764</a>
+                <a href="">thinh@techmaster.vn</a>
+                <a href="">huong@techmaster.vn</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-address">
+                <h3 class="footer-title">Địa chỉ</h3>
+                <p>Cơ sở 1: 14 ngõ 4, Nguyễn Đình Chiểu, Quận Hai Bà Trưng, Hà Nội</p>
+                <p>Cơ sở 2: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-bottom">
+                <p>
+                  © All Copyrights Reserved by 
+                  <a href="">Mironcoder</a>
+                </p>
+                <div class="footer-card">
+                  <a href="">
+                    <img src="../public/image/banner/payment-1.jpg" alt="">
+                  </a>
+                  <a href="">
+                    <img src="../public/image/banner/payment-2.jpg" alt="">
+                  </a>
+                  <a href="">
+                    <img src="../public/image/banner/payment-3.jpg" alt="">
+                  </a>
+                  <a href="">
+                    <img src="../public/image/banner/payment-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="../lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script src="../public/js/main.js"></script>
+    <script src="../public/js/detail.js"></script>
+</body>
+</html>
