@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../public/image/favicon/favicon2.ico">
+    <!-- Link bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- Link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link slick -->
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      />
+    <!-- Link css -->
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/base.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-top">
+          <div class="container">
+            <div class="header-content">
+              <a href="../index.html" class="header-logo">
+                <img src="../public/image/logo/logo.png" alt="Logo">
+              </a>
+    
+              <a href="" class="header-account">
+                <img src="../public/image/logo/user.png" alt="Account">
+                <p>Cường</p>
+              </a>
+    
+              <div class="header-search">
+                <input type="text" placeholder="Tìm Kiếm">
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+    
+              <div class="header-group">
+                <a href="" class="header-wish">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+                <a class="header-cart">
+                  <i class="fa-solid fa-basket-shopping"></i>
+                  <div class="header-cart-number">
+                    <p>1</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-bot">
+          <div class="container">
+            <div class="navbar-content">
+                <ul class="navbar-list">
+                  <li class="navbar-item">
+                    <a href="../index.html">Trang Chủ</a>
+                  </li>
+                  <li class="navbar-item dropdown">
+                    <a href="./shop.html" class="dropdown-toggle">Sản Phẩm</a>
+                    <ul class="dropdown-list">
+                      <li>
+                        <a href="./shop.html">Rau</a>
+                      </li>
+                      <li>
+                        <a href="./shop.html">Quả</a>
+                      </li>
+                      <li>
+                        <a href="./shop.html">Thịt</a>
+                      </li>
+                      <li>
+                        <a href="./shop.html">Đồ Ăn Nhanh</a>
+                      </li>
+                      <li>
+                        <a href="./shop.html">Đồ Uống</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="./about.html">Giới Thiệu</a>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="./blog.html">Tin Tức</a>
+                  </li>
+                  <li class="navbar-item">
+                    <a href="./contact.html">Liên Hệ</a>
+                  </li>
+                </ul>
+                <div class="navbar-info-group">
+                  <div class="navbar-info">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>
+                      <small>Số Điện Thoại</small>
+                      <span>0336294777</span>
+                    </p>
+                  </div>
+                  <div class="navbar-info">
+                    <i class="fa-solid fa-at"></i>
+                    <p>
+                      <small>Email</small>
+                      <span>support@example.com</span>
+                    </p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+          <div class="cart-sidebar-total">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <p>Số item <span>(5)</span></p>
+          </div>
+          <button class="cart-sidebar-close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <ul class="cart-sidebar-list">
+          <li class="cart-sidebar-item">
+            <div class="cart-sidebar-image">
+              <a href="./page/deital.html">
+                <img src="../public/image/product/product-1.jpg" alt="">
+              </a>
+            </div>
+            <div class="cart-sidebar-content">
+              <div class="cart-sidebar-info">
+                <h6>Ớt Ngọt</h6>
+                <p>$28</p>
+              </div>
+              <div class="cart-sidebar-action-group">
+                <div class="product-action">
+                  <button class="action-minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input class="action-input" type="text" name="" id="" value="1">
+                  <button class="action-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <button class="action-delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+    
+          <li class="cart-sidebar-item">
+            <div class="cart-sidebar-image">
+              <a href="./page/deital.html">
+                <img src="../public/image/product/product-1.jpg" alt="">
+              </a>
+            </div>
+            <div class="cart-sidebar-content">
+              <div class="cart-sidebar-info">
+                <h6>Ớt Ngọt</h6>
+                <p>$28</p>
+              </div>
+              <div class="cart-sidebar-action-group">
+                <div class="product-action">
+                  <button class="action-minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input class="action-input" type="text" name="" id="" value="1">
+                  <button class="action-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <button class="action-delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+    
+          <li class="cart-sidebar-item">
+            <div class="cart-sidebar-image">
+              <a href="./page/deital.html">
+                <img src="../public/image/product/product-1.jpg" alt="">
+              </a>
+            </div>
+            <div class="cart-sidebar-content">
+              <div class="cart-sidebar-info">
+                <h6>Ớt Ngọt</h6>
+                <p>$28</p>
+              </div>
+              <div class="cart-sidebar-action-group">
+                <div class="product-action">
+                  <button class="action-minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input class="action-input" type="text" name="" id="" value="1">
+                  <button class="action-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <button class="action-delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+    
+          <li class="cart-sidebar-item">
+            <div class="cart-sidebar-image">
+              <a href="./page/deital.html">
+                <img src="../public/image/product/product-1.jpg" alt="">
+              </a>
+            </div>
+            <div class="cart-sidebar-content">
+              <div class="cart-sidebar-info">
+                <h6>Ớt Ngọt</h6>
+                <p>$28</p>
+              </div>
+              <div class="cart-sidebar-action-group">
+                <div class="product-action">
+                  <button class="action-minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input class="action-input" type="text" name="" id="" value="1">
+                  <button class="action-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <button class="action-delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+    
+          <li class="cart-sidebar-item">
+            <div class="cart-sidebar-image">
+              <a href="./page/deital.html">
+                <img src="../public/image/product/product-1.jpg" alt="">
+              </a>
+            </div>
+            <div class="cart-sidebar-content">
+              <div class="cart-sidebar-info">
+                <h6>Ớt Ngọt</h6>
+                <p>$28</p>
+              </div>
+              <div class="cart-sidebar-action-group">
+                <div class="product-action">
+                  <button class="action-minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input class="action-input" type="text" name="" id="" value="1">
+                  <button class="action-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+                <button class="action-delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="cart-sidebar-footer">
+          <a class="cart-sidebar-checkout" href="../page/checkout.html">
+            <span class="cart-sidebar-checkout-label">Mua Ngay</span>
+            <span class="cart-sidebar-checkout-price">$140</span>
+          </a>
+        </div>
+    </div>
+
+    <section class="shop-banner">
+        <div class="container">
+            <h2>Thanh Toán</h2>
+            <ol class="content">
+                <li class="content-item">Trang chủ</li>
+                <li class="content-item active">Thanh Toán</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="checkout-info">
+                        <div class="info-ship">
+                            <h2>Thông tin vận chuyển</h2>
+                            <p>
+                                Bạn có tài khoản chưa
+                                <a href="">Đăng nhập</a>
+                            </p>
+                            <div class="info-ship-input">
+                                <label for="fullname"></label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Tên đầy đủ">
+                            </div>
+                            <div class="input-email-phone">
+                                <div class="info-ship-input">
+                                    <label for="email"></label>
+                                    <input type="text" id="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="info-ship-input">
+                                    <label for="phone"></label>
+                                    <input type="text" id="phone" name="phone" placeholder="Số điện thoại">
+                                </div>
+                            </div>
+                            <div class="info-ship-input">
+                                <label for="address"></label>
+                                <input type="text" id="address" name="address" placeholder="Địa chỉ">
+                            </div>
+                            <div class="input-address-detail">
+                                <div class="info-ship-input">
+                                    <select name="province" id="province">
+                                        <option value="">Tỉnh / thành</option>
+                                    </select>
+                                </div>
+                                <div class="info-ship-input">
+                                    <select name="province" id="province">
+                                        <option value="">Quận / huyện</option>
+                                    </select>
+                                </div>
+                                <div class="info-ship-input">
+                                    <select name="province" id="province">
+                                        <option value="">Xã / phường</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="info-ship-input">
+                                <label for="note"></label>
+                                <input type="text" id="note" name="note" placeholder="Ghi chú">
+                            </div>
+                        </div>
+                        <div class="payments">
+                            <h2>Hình thức thanh toán</h2>
+                            <div class="radio-wrapper">
+                                <input type="radio" name="payments" id="payments">
+                                <label for="payments">
+                                    <span>Thanh toán qua VNPAY-QR</span>
+                                </label>
+                            </div>
+                            <div class="radio-wrapper">
+                                <input type="radio" name="payments" id="payments">
+                                <label for="payments">
+                                    <span>Thanh toán qua Ví MoMo</span>
+                                </label>
+                            </div>
+                            <div class="radio-wrapper">
+                                <input type="radio" name="payments" id="payments">
+                                <label for="payments">
+                                    <span>	Thanh toán khi nhận hàng (COD)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="confirm">
+                            <a href="">Tiếp tục mua hàng</a>
+                            <button>
+                                <span>Thanh Toán</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="checkout-order">
+                        <div class="order-product">
+                            <ul class="order-product-list">
+                                <li class="order-product-item">
+                                    <div class="order-product-image">
+                                        <a href="./deital.html">
+                                            <img src="../public/image/product/product-1.jpg" alt="">
+                                        </a>
+                                        <span class="order-product-number">1</span>
+                                    </div>
+                                    <div class="order-product-content">
+                                        <h6 class="order-product-name">Ớt Ngọt</h6>
+                                        <p class="order-product-price">$28</p>
+                                    </div>
+                                </li>
+                                <li class="order-product-item">
+                                    <div class="order-product-image">
+                                        <a href="./deital.html">
+                                            <img src="../public/image/product/product-1.jpg" alt="">
+                                        </a>
+                                        <span class="order-product-number">1</span>
+                                    </div>
+                                    <div class="order-product-content">
+                                        <h6 class="order-product-name">Ớt Ngọt</h6>
+                                        <p class="order-product-price">$28</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="order-discount-btn">
+                            <input type="text" placeholder="Mã giảm giá">
+                            <button>Sử dụng</button>
+                        </div>
+                        <div class="order-bill">
+                            <div class="bill-money bill-subtotal">
+                                <span>Tạm tính</span>
+                                <span class="sub-total-money">$56</span>
+                            </div>
+                            <div class="bill-money bill-discount">
+                                <span>Giảm giá</span>
+                                <span class="discount-money">$10</span>
+                            </div>
+                            <div class="bill-money bill-total">
+                                <span>Tổng tiền</span>
+                                <span class="total-money">$46</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-widget">
+                <a class="footer-logo" href="">
+                  <img src="../public/image/logo/logo.png" alt="">
+                </a>
+                <p>Tên công ty: CÔNG TY CỔ PHẦN ĐẦU TƯ ORGANICA</p>
+                <p>Mã Số thuế: 0311428380</p>
+                <ul class="footer-social">
+                  <li>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa-brands fa-pinterest-p"></i></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-contact">
+                <h3 class="footer-title">Liên Hệ Chúng Tôi</h3>
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-at"></i>
+                    <p>
+                      <span>support@example.com</span>
+                      <span>carrer@example.com</span>
+                    </p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>
+                      <span>0336294777</span>
+                      <span>0336294777</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-links">
+                <h3 class="footer-title">Đường Dẫn Nhanh</h3>
+                <a href="">Phạm Thị Mẫn - 0963023185</a>
+                <a href="">manpham@techmaster.vn</a>
+                <a href="">Dương Đức Thịnh - 0987273764</a>
+                <a href="">thinh@techmaster.vn</a>
+                <a href="">huong@techmaster.vn</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="footer-address">
+                <h3 class="footer-title">Địa chỉ</h3>
+                <p>Cơ sở 1: 14 ngõ 4, Nguyễn Đình Chiểu, Quận Hai Bà Trưng, Hà Nội</p>
+                <p>Cơ sở 2: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer-bottom">
+                <p>
+                  © All Copyrights Reserved by 
+                  <a href="">Mironcoder</a>
+                </p>
+                <div class="footer-card">
+                  <a href="">
+                    <img src="../public/image/banner/payment-1.jpg" alt="">
+                  </a>
+                  <a href="">
+                    <img src="../public/image/banner/payment-2.jpg" alt="">
+                  </a>
+                  <a href="">
+                    <img src="../public/image/banner/payment-3.jpg" alt="">
+                  </a>
+                  <a href="">
+                    <img src="../public/image/banner/payment-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <script src="../lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../public/js/checkout.js"></script>
+</body>
+</html>
