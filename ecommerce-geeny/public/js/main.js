@@ -16,20 +16,20 @@ $('.testimonial-slick').slick({
     nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '250px',
-          slidesToShow: 3
+          centerPadding: '150px',
+          slidesToShow: 1
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '250px',
+          centerPadding: '0',
           slidesToShow: 1
         }
       }

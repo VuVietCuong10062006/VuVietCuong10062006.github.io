@@ -1337,3 +1337,12 @@
 .footer-bottom a:hover{
     text-decoration: underline;
 }
+
+/*  */
+
+@media (max-width: 575px){
+    .testimonial-card  p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

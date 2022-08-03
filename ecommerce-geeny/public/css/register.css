@@ -1,0 +1,113 @@
+
+body {
+    color: #555555;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-form {
+    width: 400px;
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.register-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #119744;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.register-form p a{
+    color: #119744;
+}
+
+.register-form p a:hover{
+    text-decoration: underline;
+}
+
+.input-row {
+    margin-bottom: 1.5rem;
+}
+.input-row input {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1rem;
+    outline: none;
+    transition: all 0.3s ease-out;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.input-row input:focus {
+    border: 1px solid #119744;
+    outline: none;
+}
+.input__note textarea {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    user-select: none;
+    resize: none;
+    padding: 1rem;
+}
+.input__note textarea:focus {
+    border: 1px solid #00bfa6;
+}
+.input-row {
+    position: relative;
+}
+.input-row:last-child {
+    margin-bottom: 0;
+}
+.input-row.success input {
+    border-color: #119744;
+}
+.input-row.error input {
+    border-color: #e74c3c;
+}
+.input-row small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    visibility: hidden;
+    font-size: 12px;
+}
+.input-row.error small {
+    visibility: visible;
+}
+.btn {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    padding: 8px 15px !important;
+}
+#btn-register {
+    display: inline-block;
+    color: #fff;
+    background-color: #119744;
+    border: 2px solid #119744;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+}

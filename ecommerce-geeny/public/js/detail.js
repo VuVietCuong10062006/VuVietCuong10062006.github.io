@@ -8,7 +8,8 @@
 });
 
 $('.details-thumb').slick({
-  slidesToShow: 5,
+  slidesToShow: 4,
+  arrows:false,
   slidesToScroll: 1,
   asNavFor: '.details-preview',
   focusOnSelect: true,
