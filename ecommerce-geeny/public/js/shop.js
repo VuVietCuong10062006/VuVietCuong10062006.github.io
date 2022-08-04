@@ -44,7 +44,7 @@ let renderProductShop = (arr = []) =>{
             <div class="product-wish">
               <i class="fa-solid fa-heart"></i>
             </div>
-            <a href="./deital.html">
+            <a href="./deital.html?id=${p.id}">
               <img src=${p.images[0]} alt="">
             </a>
             <div class="product-widget">
