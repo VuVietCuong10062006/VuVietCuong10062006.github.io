@@ -97,11 +97,11 @@ let renderProductSell = (arr = []) =>{
       </div>
       <div class="product-content">
         <div class="product-rating">
-          <i class="active fa-solid fa-star"></i>
-          <i class="active fa-solid fa-star"></i>
-          <i class="active fa-solid fa-star"></i>
-          <i class="active fa-solid fa-star"></i>
-          <i class=" fa-solid fa-star"></i>
+          <i class="${p.rating >=1 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=2 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=3 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=4 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=5 ?'active' :''} fa-solid fa-star"></i>
           <a href="">(3)</a>
         </div>
         <h6 class="product-name">${p.name}</h6>
@@ -156,16 +156,16 @@ let renderProductFeature = (arr = []) =>{
       <div class="feature-content">
         <h6 class="feature-name">${p.name}</h6>
         <div class="feature-rating">
-          <i class="active fa-solid fa-star"></i>
-          <i class="active fa-solid fa-star"></i>
-          <i class="active fa-solid fa-star"></i>
-          <i class="active fa-solid fa-star"></i>
-          <i class=" fa-solid fa-star"></i>
+          <i class="${p.rating >=1 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=2 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=3 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=4 ?'active' :''} fa-solid fa-star"></i>
+          <i class="${p.rating >=5 ?'active' :''} fa-solid fa-star"></i>
           <a href="">(3)</a>
         </div>
         <h6 class="feature-price">${p.price}</h6>
         <p class="feature-desc">
-          ${p.decscripcion}
+          ${p.description}
         </p>
         <button class="feature-add">
           <i class="fa-solid fa-basket-shopping"></i>

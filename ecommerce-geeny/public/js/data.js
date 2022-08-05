@@ -20,7 +20,7 @@ let products =[
         id : 2,
         name : "Lá lách romani",
         price : 32000,
-        rating : 4,
+        rating : 3,
         description : "Xà lách Romaine giàu Vitamin A, Vitamin K, Vitamin C, Magiê, chất xơ và ít protein",
         tag : "Sale",
         images : [
@@ -36,7 +36,7 @@ let products =[
         id : 3,
         name : "Mồng tơi hữu cơ",
         price : 25000,
-        rating : 4,
+        rating : 5,
         description : "Rau mồng tơi có tính hàn, vị chua, tán nhiệt, mất máu, lợi tiểu, giải độc, đẹp da, trị rôm sảy mụn nhọt hiệu quả",
         tag : "Sale",
         images : [
@@ -52,7 +52,7 @@ let products =[
         id : 4,
         name : "Lá trà xanh",
         price : 63000,
-        rating : 4,
+        rating : 2,
         description : "Trong thành phần của trà xanh chứa hàm lượng vitamin C cao, các chất polyphenol, flavonoid",
         tag : "Sale",
         images : [
@@ -84,7 +84,7 @@ let products =[
         id : 6,
         name : "Cần tây",
         price : 97000,
-        rating : 4,
+        rating : 3,
         description : "Không chỉ là loại rau dễ dàng kết hợp với nhiều món ăn, cần tây còn được ví như cây thuốc quý đa năng",
         tag : "Sale",
         images : [
@@ -100,7 +100,7 @@ let products =[
         id : 7,
         name : "Chanh không hạt",
         price : 45000,
-        rating : 4,
+        rating : 5,
         description : "Chanh không hạt, mọng nước và rất thơm. Là loại quả được xếp vào bảng những loại quả tốt nhất cho sức khỏe",
         tag : "Sale",
         images : [
@@ -116,7 +116,7 @@ let products =[
         id : 8,
         name : "Su su",
         price : 42000,
-        rating : 4,
+        rating : 5,
         description : "Su su chứa nhiều vitamin, khoáng chất và chất xơ thiết yếu. Su su có rất ít carb mà lại nhiều chất xơ hòa tan",
         tag : "Sale",
         images : [
@@ -132,7 +132,7 @@ let products =[
         id : 9,
         name : "Hành lá hữu cơ",
         price : 21000,
-        rating : 4,
+        rating : 2,
         description : "Hành lá giàu chất xơ giúp tiêu hóa tốt hơn. Hành lá giàu vitamin C và vitamin A",
         tag : "Sale",
         images : [
@@ -148,7 +148,7 @@ let products =[
         id : 10,
         name : "Bông cải xanh",
         price : 45000,
-        rating : 4,
+        rating : 3,
         description : "Bông cải xanh là chứa nhiều vitamin và khoáng chất và đặc biệt giàu protein hơn phần lớn các loại rau củ khác",
         tag : "Sale",
         images : [
@@ -164,7 +164,7 @@ let products =[
         id : 11,
         name : "Thanh long ruột đỏ",
         price : 99000,
-        rating : 4,
+        rating : 5,
         description : "Thanh long chứa nhiều chất xơ giúp cải thiện hoạt động của đường ruột tốt hơn",
         tag : "Feature",
         images : [
@@ -196,7 +196,7 @@ let products =[
         id : 13,
         name : "Chuối già hữu cơ",
         price : 45000,
-        rating : 4,
+        rating : 3,
         description : "Chuối già Nam Mỹ là vua Vitamin B6 trong các loại trái cây. Ba lợi ích của Vitamin B6",
         tag : "Feature",
         images : [
@@ -212,7 +212,7 @@ let products =[
         id : 14,
         name : "Xoài Tứ Quý",
         price : 85000,
-        rating : 4,
+        rating : 3,
         description : "Xoài chứa nhiều vitamin A, B1, B2, B6, C, E, và các khoáng chất như: biotin, caroten, pantotenic axit",
         tag : "Feature",
         images : [
@@ -228,7 +228,7 @@ let products =[
         id : 15,
         name : "Ổi",
         price : 99000,
-        rating : 4,
+        rating : 1,
         description : "Ổi rất giàu các chất chống oxy hóa, vitamin C, kali và chất xơ. Chất xơ giảm lượng cholesterol xấu",
         tag : "New",
         images : [
@@ -244,7 +244,7 @@ let products =[
         id : 16,
         name : "Cà chua cherry",
         price : 58000,
-        rating : 4,
+        rating : 2,
         description : "Cà chua bi cherry là nguồn cung cấp vitamin A và C tuyệt vời giúp ngăn ngừa bệnh quáng gà",
         tag : "New",
         images : [
@@ -260,7 +260,7 @@ let products =[
         id : 17,
         name : "Ớt chuông",
         price : 85000,
-        rating : 4,
+        rating : 3,
         description : "Ớt chuông có hàm lượng vitamin C cao hơn cả cam, chanh, đu đủ, dứa/ thơm",
         tag : "New",
         images : [
@@ -276,7 +276,7 @@ let products =[
         id : 18,
         name : "Dưa lê hữu cơ",
         price : 105000,
-        rating : 4,
+        rating : 1,
         description : "Dưa lê là một loại dưa thơm ngon, giàu dinh dưỡng, có hàm lượng chất xơ và nước cao",
         tag : "New",
         images : [
@@ -308,7 +308,7 @@ let products =[
         id : 20,
         name : "Kiwi vàng Zespri",
         price : 179000,
-        rating : 4,
+        rating : 5,
         description : "Kiwi chứa một hàm lượng lớn polyphenol (các dưỡng chất cần thiết cho con người)",
         tag : "New",
         images : [
@@ -324,7 +324,7 @@ let products =[
         id : 21,
         name : "Dừa trọc",
         price : 29000,
-        rating : 4,
+        rating : 2,
         description : "Nước dừa rất giàu kali và các khoáng chất khác nên giúp điều hòa và bổ sung nước cho cơ thể",
         tag : "New",
         images : [
@@ -340,7 +340,7 @@ let products =[
         id : 22,
         name : "Trứng gà thả vườn",
         price : 100000,
-        rating : 4,
+        rating : 3,
         description : "Trứng gà dễ dàng chế biến theo công thức đơn giản tới phức tạp",
         tag : "New",
         images : [
@@ -372,7 +372,7 @@ let products =[
         id : 24,
         name : "Sữa nghệ hữu cơ",
         price : 195000,
-        rating : 4,
+        rating : 1,
         description : "Dùng trực tiếp, hoặc thêm vào ngũ cốc, hay làm nguyên liệu pha chế các thức uống khác",
         tag : "New",
         images : [
@@ -388,7 +388,7 @@ let products =[
         id : 25,
         name : "Sữa yến mạch hữu",
         price : 70000,
-        rating : 4,
+        rating : 5,
         description : "Nước, Yến mạch hữu cơ (16%).Thức uống không chứa lactose và phù hợp với người ăn chay",
         tag : "New",
         images : [
@@ -404,7 +404,7 @@ let products =[
         id : 26,
         name : "Nước ép lựu hữu cơ",
         price : 380000,
-        rating : 4,
+        rating : 3,
         description : "Lắc đều trước khi dùng. Mỗi ngày dùng trực tiếp 100ml, có thể pha loãng với chút đá viên",
         tag : "New",
         images : [
@@ -420,7 +420,7 @@ let products =[
         id : 27,
         name : "Củ nghệ",
         price : 37000,
-        rating : 4,
+        rating : 2,
         description : "Nghệ là một trong những gia vị quen thuộc trong nấu ăn. Nghệ có chứa nhiều dưỡng chất, đặc biệt là curcumin",
         tag : "New",
         images : [
@@ -436,7 +436,7 @@ let products =[
         id : 28,
         name : "Cà rốt",
         price : 44000,
-        rating : 4,
+        rating : 1,
         description : "Ăn cà rốt chứa vitamin A, vitamin C, carotenoid, kali và các chất chống oxy hoá",
         tag : "New",
         images : [
@@ -452,7 +452,7 @@ let products =[
         id : 29,
         name : "Củ dền",
         price : 31000,
-        rating : 4,
+        rating : 3,
         description : "Củ dền mang lại nhiều lợi ích tuyệt vời cho sức khỏe: chứa chất chống oxy hóa, giảm viêm",
         tag : "New",
         images : [
@@ -468,7 +468,7 @@ let products =[
         id : 30,
         name : "Củ cải trắng",
         price : 47000,
-        rating : 4,
+        rating : 1,
         description : "Củ cải trắng không chỉ là một món ăn phổ biến, mà còn được biết tới như loại thần dược không thua kém gì nhân sâm",
         tag : "New",
         images : [

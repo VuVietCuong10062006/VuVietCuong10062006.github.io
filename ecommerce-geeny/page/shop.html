@@ -379,17 +379,15 @@
                     </div>
 
                     <div class="shop-widget">
-                        <h6 class="shop-widget-title">Lọc Theo Giá</h6>
-                        <form>
-                            <div class="shop-widget-group">
-                                <input type="text" placeholder="Min - 00">
-                                <input type="text" placeholder="Max - 5k">
-                            </div>
-                            <button class="shop-widget-btn">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <span>Tìm Kiếm</span>
-                            </button>
-                        </form>
+                      <h6 class="shop-widget-title">Lọc Theo Giá</h6>
+                      <div class="shop-widget-group">
+                        <input class="search-price-min" type="text" placeholder="Min - 00">
+                        <input class="search-price-max" type="text" placeholder="Max - 5k">
+                      </div>
+                      <button class="shop-widget-btn btn-search-price">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <span>Tìm Kiếm</span>
+                      </button>
                     </div>
 
                     <div class="shop-widget">
@@ -398,8 +396,8 @@
                             <ul class="shop-widget-list">
                                 <li>
                                    <div class="shop-widget-content">
-                                    <input type="checkbox" id="feat1">
-                                    <label for="feat1">
+                                    <input class="checkbox-rating" type="checkbox" id="star5" value="5">
+                                    <label for="star5">
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
@@ -411,8 +409,8 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="feat2">
-                                    <label for="feat2">
+                                    <input class="checkbox-rating" type="checkbox" id="star4" value="4">
+                                    <label for="star4">
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
@@ -424,8 +422,8 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="feat3">
-                                    <label for="feat3">
+                                    <input class="checkbox-rating" type="checkbox" id="star3" value="3">
+                                    <label for="star3">
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
@@ -437,8 +435,8 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="feat4">
-                                    <label for="feat4">
+                                    <input class="checkbox-rating" type="checkbox" id="star2" value="2">
+                                    <label for="star2">
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star"></i>
@@ -450,8 +448,8 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="feat5">
-                                    <label for="feat5">
+                                    <input class="checkbox-rating" type="checkbox" id="star1" value="1">
+                                    <label for="star1">
                                         <i class="fas fa-star active"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -462,10 +460,10 @@
                                    <span class="shop-widget-number">(13)</span>
                                 </li>
                             </ul>
-                            <button class="shop-widget-btn">
+                            <!-- <button class="shop-widget-btn">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <span>Xoá</span>
-                            </button>
+                            </button> -->
                         </form>
                     </div>
 
@@ -475,7 +473,7 @@
                             <ul class="shop-widget-list">
                                 <li>
                                    <div class="shop-widget-content">
-                                    <input type="checkbox" id="tag1">
+                                    <input class="checkbox-tag" type="checkbox" id="tag1" value="New">
                                     <label for="tag1">
                                         New Item
                                     </label>
@@ -484,7 +482,7 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="tag2">
+                                    <input class="checkbox-tag" type="checkbox" id="tag2" class="Sale" value="Sale">
                                     <label for="tag2">
                                         Sale Item
                                     </label>
@@ -493,7 +491,7 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="tag3">
+                                    <input class="checkbox-tag" type="checkbox" id="tag3" value="Rating">
                                     <label for="tag3">
                                         Rating Items
                                     </label>
@@ -502,7 +500,7 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="tag4">
+                                    <input class="checkbox-tag" type="checkbox" id="tag4" value="Feature">
                                     <label for="tag4">
                                         Feature Items
                                     </label>
@@ -511,7 +509,7 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="tag5">
+                                    <input class="checkbox-tag" type="checkbox" id="tag5" value="Discount">
                                     <label for="tag5">
                                         Discount Items
                                     </label>
@@ -519,21 +517,21 @@
                                    <span class="shop-widget-number">(13)</span>
                                 </li>
                             </ul>
-                            <button class="shop-widget-btn">
+                            <!-- <button class="shop-widget-btn">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <span>Xoá</span>
-                            </button>
+                            </button> -->
                         </form>
                     </div>
 
                     <div class="shop-widget">
                         <h6 class="shop-widget-title">Lọc Theo Danh Mục</h6>
                         <form>
-                            <input class="shop-widget-search" type="text" placeholder="Search...">
+                            <!-- <input class="shop-widget-search" type="text" placeholder="Search..."> -->
                             <ul class="shop-widget-list shop-widget-scroll">
                                 <li>
                                    <div class="shop-widget-content">
-                                    <input type="checkbox" id="cate1">
+                                    <input class="checkbox-category" type="checkbox" id="cate1" value="rau">
                                     <label for="cate1">
                                         Rau
                                     </label>
@@ -542,7 +540,7 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="cate2">
+                                    <input class="checkbox-category" type="checkbox" id="cate2" value="quả">
                                     <label for="cate2">
                                         Quả
                                     </label>
@@ -551,36 +549,36 @@
                                 </li>
                                 <li>
                                     <div class="shop-widget-content">
-                                    <input type="checkbox" id="cate3">
+                                    <input class="checkbox-category" type="checkbox" id="cate3" value="củ" >
                                     <label for="cate3">
+                                        Củ
+                                    </label>
+                                   </div>
+                                   <span class="shop-widget-number">(13)</span>
+                                </li>
+                                <li>
+                                    <div class="shop-widget-content">
+                                    <input class="checkbox-category" type="checkbox" id="cate4" value="thức uống">
+                                    <label for="cate4">
+                                        Thức uống
+                                    </label>
+                                   </div>
+                                   <span class="shop-widget-number">(13)</span>
+                                </li>
+                                <li>
+                                    <div class="shop-widget-content">
+                                    <input class="checkbox-category" type="checkbox" id="cate5" value="thịt">
+                                    <label for="cate5">
                                         Thịt
                                     </label>
                                    </div>
                                    <span class="shop-widget-number">(13)</span>
                                 </li>
-                                <li>
-                                    <div class="shop-widget-content">
-                                    <input type="checkbox" id="cate4">
-                                    <label for="cate4">
-                                        Đồ Ăn Nhanh
-                                    </label>
-                                   </div>
-                                   <span class="shop-widget-number">(13)</span>
-                                </li>
-                                <li>
-                                    <div class="shop-widget-content">
-                                    <input type="checkbox" id="cate5">
-                                    <label for="cate5">
-                                        Đồ Uống
-                                    </label>
-                                   </div>
-                                   <span class="shop-widget-number">(13)</span>
-                                </li>
                             </ul>
-                            <button class="shop-widget-btn">
+                            <!-- <button class="shop-widget-btn">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <span>Xoá</span>
-                            </button>
+                            </button> -->
                         </form>
                     </div>
                 </div>
@@ -589,12 +587,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="shop-filter">
-                                <label class="filter-label">Short by :</label>
-                                <select name="" id="">
-                                    <option selected>Default</option>
-                                    <option value="1">Trending</option>
-                                    <option value="2">Featured</option>
-                                    <option value="3">Recommend</option>
+                                <label for="option">Sắp xếp theo :</label>
+                                <select class="select-option" name="" id="option">
+                                    <option selected>Măc định</option>
+                                    <option value="1">Giá thấp đến cao</option>
+                                    <option value="2">Giá cao đến thấp</option>
                                 </select>
                             </div>
                         </div>
