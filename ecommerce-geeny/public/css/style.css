@@ -5,6 +5,7 @@
 @import url("./blog.css");
 @import url("./contact.css");
 @import url("./checkout.css");
+@import url("./cart.css");
 /* header */
 .header{
     background-color: #fff;
