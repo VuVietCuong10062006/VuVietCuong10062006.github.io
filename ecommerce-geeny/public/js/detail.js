@@ -6,14 +6,23 @@
 let headerCart = document.querySelector(".header-cart")
 let cartSidebarClose = document.querySelector(".cart-sidebar-close")
 let cartSidebar = document.querySelector(".cart-sidebar")
+let overlayEle = document.querySelector("#overlay")
+
 headerCart.addEventListener("click",() =>{
   cartSidebar.classList.add("cart-sidebar-active")
+  overlayEle.style.display = "block"
 })
 
 cartSidebarClose.addEventListener('click',() =>{
   cartSidebar.classList.remove("cart-sidebar-active")
+  overlayEle.style.display = "none"
 })
 
+overlayEle.addEventListener('click',() =>{
+  cartSidebar.classList.remove("cart-sidebar-active")
+  overlayEle.style.display = "none"
+  navSidebar.classList.remove('nav-sidebar-active')
+})
 // nav-sidebar
 
 let navSidebarBtn = document.querySelector('.btn-nav-sidebar')
@@ -22,10 +31,12 @@ let navSidebarClose = document.querySelector('.nav-sidebar-close')
 
 navSidebarBtn.addEventListener('click',() =>{
   navSidebar.classList.add('nav-sidebar-active')
+  overlayEle.style.display = "block"
 })
 
 navSidebarClose.addEventListener('click',() =>{
   navSidebar.classList.remove('nav-sidebar-active')
+  overlayEle.style.display = "none"
 })
 
 
@@ -90,6 +101,73 @@ let renderImageVideo = (arr=[]) =>{
 }
 
 renderImageVideo(product.images)
+
+// add product to cart
+let btnAddToCart = document.querySelector(".details-add")
+
+btnAddToCart.addEventListener("click", () =>{
+  let item ={
+    id: product.id,
+    name: product.name,
+    price: product.price,
+    image: product.images[0],
+    count: 1
+  }
+
+  addProductToCart(item)
+  alert("Thêm vào giỏ hàng thành công")
+  let productCartSideBar = getDataCartFromLocalStorage()
+  renderCartSideBarListProduct(productCartSideBar)
+})
+
+// render product cart-sidebar
+let productCartSideBar = getDataCartFromLocalStorage()
+let cartSideBarListEle = document.querySelector(".cart-sidebar-list")
+
+let renderCartSideBarListProduct = (arr =[]) => {
+  cartSideBarListEle.innerHTML = ""
+  let html = ""
+  if(arr.length == 0) {
+    cartSideBarListEle.innerHTML = "Chưa có sản phẩm"
+    return
+  }
+
+  arr.forEach((p) =>{
+    html += `<li class="cart-sidebar-item">
+    <div class="cart-sidebar-image">
+      <a href="../page/deital.html?id=${p.id}">
+        <img src=${p.image} alt="">
+      </a>
+    </div>
+    <div class="cart-sidebar-content">
+      <div class="cart-sidebar-info">
+        <h6>${p.name}</h6>
+        <p>${p.price}</p>
+      </div>
+      <div class="cart-sidebar-action-group">
+        <div class="product-action">
+          <button class="action-minus">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <input class="action-input" type="text" name="" id="" value="${p.count}">
+          <button class="action-plus">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <button class="action-delete">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </li>`
+  })
+
+  cartSideBarListEle.innerHTML = html
+}
+
+renderCartSideBarListProduct(productCartSideBar)
+
+
 
 
 // slick slider
