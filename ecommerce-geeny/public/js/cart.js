@@ -63,15 +63,15 @@ let renderCartSideBarListProduct = (arr =[]) => {
       </div>
       <div class="cart-sidebar-action-group">
         <div class="product-action">
-          <button class="action-minus">
+          <button class="action-minus" onclick = 'minusProduct(${p.id})'>
             <i class="fa-solid fa-minus"></i>
           </button>
           <input class="action-input" type="text" name="" id="" value="${p.count}">
-          <button class="action-plus">
+          <button class="action-plus" onclick = 'plusProduct(${p.id})'>
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
-        <button class="action-delete">
+        <button class="action-delete" onclick = 'removeProduct(${p.id})'>
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </div>
@@ -83,3 +83,40 @@ let renderCartSideBarListProduct = (arr =[]) => {
 }
 
 renderCartSideBarListProduct(productCartSideBar)
+
+// minus count cart-sidebar
+let minusProduct = (id) =>{
+  let items = getDataCartFromLocalStorage()
+  let product = items.find(p => p.id == id)
+  if(product.count > 1){
+    product.count--
+  }
+  setDataCartToLocalStorage(items)
+  renderCartSideBarListProduct(items)
+}
+
+// plus count cart-sidebar
+let plusProduct = (id) =>{
+  let items = getDataCartFromLocalStorage()
+  let product = items.find(p => p.id == id)
+  product.count++
+  setDataCartToLocalStorage(items)
+  renderCartSideBarListProduct(items)
+}
+
+// remove item cart-sidebar
+let removeProduct = (id) =>{
+  let items = getDataCartFromLocalStorage()
+  let itemsNew = items.filter(p => p.id != id)
+  setDataCartToLocalStorage(itemsNew)
+  renderCartSideBarListProduct(itemsNew)
+  updateTotalCartSidebar()
+}
+
+let updateTotalCartSidebar = () =>{
+  let cart = getDataCartFromLocalStorage()
+  document.querySelector(".cart-sidebar-total span").innerHTML = cart.length
+  document.querySelector(".header-cart-number p").innerHTML = cart.length
+}
+
+updateTotalCartSidebar()
