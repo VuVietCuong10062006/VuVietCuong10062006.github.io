@@ -44,6 +44,8 @@ let cartSideBarListEle = document.querySelector(".cart-sidebar-list")
 let renderCartSideBarListProduct = (arr =[]) => {
   cartSideBarListEle.innerHTML = ""
   let html = ""
+  updateTotalMoneyCartSidebar(arr)
+
   if(arr.length == 0) {
     cartSideBarListEle.innerHTML = "Chưa có sản phẩm"
     return
@@ -80,9 +82,43 @@ let renderCartSideBarListProduct = (arr =[]) => {
   })
 
   cartSideBarListEle.innerHTML = html
+  
 }
 
-renderCartSideBarListProduct(productCartSideBar)
+
+
+// render product checkout
+let productCheckout = getDataCartFromLocalStorage()
+let checkoutListProductEle = document.querySelector(".order-product-list")
+
+let renderProductCheckout = (arr =[])=>{
+  checkoutListProductEle.innerHTML = ""
+  let html = ""
+  updateTotalMoney(arr)
+
+  if(arr.length == 0){
+    checkoutListProductEle.innerHTML = "Chưa có sản phẩm"
+    return
+  }
+
+  arr.forEach((p) =>{
+    html += `<li class="order-product-item">
+    <div class="order-product-image">
+        <a href="./deital.html?id=${p.id}">
+            <img src=${p.image} alt="">
+        </a>
+        <span class="order-product-number">${p.count}</span>
+    </div>
+    <div class="order-product-content">
+        <h6 class="order-product-name">${p.name}</h6>
+        <p class="order-product-price">${p.price}</p>
+    </div>
+    </li>`
+  })
+  checkoutListProductEle.innerHTML = html
+  
+}
+
 
 // minus count cart-sidebar
 let minusProduct = (id) =>{
@@ -93,6 +129,7 @@ let minusProduct = (id) =>{
   }
   setDataCartToLocalStorage(items)
   renderCartSideBarListProduct(items)
+  renderProductCheckout(items)
 }
 
 // plus count cart-sidebar
@@ -102,6 +139,7 @@ let plusProduct = (id) =>{
   product.count++
   setDataCartToLocalStorage(items)
   renderCartSideBarListProduct(items)
+  renderProductCheckout(items)
 }
 
 // remove item cart-sidebar
@@ -110,8 +148,78 @@ let removeProduct = (id) =>{
   let itemsNew = items.filter(p => p.id != id)
   setDataCartToLocalStorage(itemsNew)
   renderCartSideBarListProduct(itemsNew)
+  renderProductCheckout(itemsNew)
   updateTotalCartSidebar()
 }
+
+// Tổng tiền cart-sidebar
+let totalMoneyCartSidebar = document.querySelector(".cart-sidebar-checkout-price")
+
+let updateTotalMoneyCartSidebar = (arr =[]) =>{
+  if(arr.length != 0){
+    totalMoneyCartSidebar.style.display = "block"
+    let total = arr.reduce((t,p) =>{
+      return t + p.count*p.price
+    },0)
+    totalMoneyCartSidebar.innerHTML = total
+  } else {
+    totalMoneyCartSidebar.style.display = "none"
+  }
+}
+
+
+// tạm tính tiền checkout
+let subTotalMoney = document.querySelector(".sub-total-money")
+let totalMoney = document.querySelector(".total-money")
+
+let updateTotalMoney = (arr = []) =>{
+  let orderBillEle = document.querySelector(".order-bill")
+  let discountBillEle = document.querySelector(".order-discount-btn")
+  if(arr.length != 0){
+    orderBillEle.style.display = "block"
+    discountBillEle.style.display = "flex"
+    let total = arr.reduce((t,p) =>{
+      return t + p.count*p.price
+    },0)
+    subTotalMoney.innerHTML = total
+    totalMoney.innerHTML = total
+  } else{
+    orderBillEle.style.display = "none"
+    discountBillEle.style.display = "none"
+  }
+}
+
+// Áp dụng mã giảm giá checkout
+
+// Danh sách mã giảm giá
+let promotionCode = {
+  GIAM10 : 10,
+  GIAM20 : 20,
+  GIAM30 : 30,
+  GIAM40 : 40,
+}
+
+let discountMoney = document.querySelector(".discount-money")
+let inputDiscountMoney = document.querySelector(".order-discount-btn input")
+let buttonDiscountMoney = document.querySelector(".order-discount-btn button")
+discountMoney.parentNode.style.display = "none"
+
+buttonDiscountMoney.addEventListener("click", () =>{
+  let discountCode = inputDiscountMoney.value
+  if(!discountCode){
+    alert("Chưa nhập mã giảm giá")
+  }else{
+    if(!promotionCode[discountCode]){
+      alert("Mã giảm giá chưa chính xác")
+    } else {
+      discountMoney.parentNode.style.display = "flex"
+      discountMoney.innerHTML = (subTotalMoney.innerHTML * promotionCode[discountCode]) / 100
+      totalMoney.innerHTML = subTotalMoney.innerHTML - discountMoney.innerHTML
+    }
+  }
+})
+
+
 
 let updateTotalCartSidebar = () =>{
   let cart = getDataCartFromLocalStorage()
@@ -119,4 +227,6 @@ let updateTotalCartSidebar = () =>{
   document.querySelector(".header-cart-number p").innerHTML = cart.length
 }
 
+renderCartSideBarListProduct(productCartSideBar)
+renderProductCheckout(productCheckout)
 updateTotalCartSidebar()

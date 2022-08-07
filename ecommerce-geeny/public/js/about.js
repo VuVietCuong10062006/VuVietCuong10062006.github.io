@@ -79,6 +79,8 @@ let cartSideBarListEle = document.querySelector(".cart-sidebar-list")
 let renderCartSideBarListProduct = (arr =[]) => {
   cartSideBarListEle.innerHTML = ""
   let html = ""
+  updateTotalMoneyCartSidebar(arr)
+  
   if(arr.length == 0) {
     cartSideBarListEle.innerHTML = "Chưa có sản phẩm"
     return
@@ -115,9 +117,9 @@ let renderCartSideBarListProduct = (arr =[]) => {
   })
 
   cartSideBarListEle.innerHTML = html
+  
 }
 
-renderCartSideBarListProduct(productCartSideBar)
 
 // minus count cart-sidebar
 let minusProduct = (id) =>{
@@ -148,10 +150,26 @@ let removeProduct = (id) =>{
   updateTotalCartSidebar()
 }
 
+// Tổng tiền cart-sidebar
+let totalMoneyCartSidebar = document.querySelector(".cart-sidebar-checkout-price")
+
+let updateTotalMoneyCartSidebar = (arr =[]) =>{
+  if(arr.length != 0){
+    totalMoneyCartSidebar.style.display = "block"
+    let total = arr.reduce((t,p) =>{
+      return t + p.count*p.price
+    },0)
+    totalMoneyCartSidebar.innerHTML = total
+  } else {
+    totalMoneyCartSidebar.style.display = "none"
+  }
+}
+
 let updateTotalCartSidebar = () =>{
   let cart = getDataCartFromLocalStorage()
   document.querySelector(".cart-sidebar-total span").innerHTML = cart.length
   document.querySelector(".header-cart-number p").innerHTML = cart.length
 }
 
+renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()

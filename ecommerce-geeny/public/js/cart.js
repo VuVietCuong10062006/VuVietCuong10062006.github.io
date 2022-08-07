@@ -44,6 +44,8 @@ let cartSideBarListEle = document.querySelector(".cart-sidebar-list")
 let renderCartSideBarListProduct = (arr =[]) => {
   cartSideBarListEle.innerHTML = ""
   let html = ""
+  updateTotalMoneyCartSidebar(arr)
+
   if(arr.length == 0) {
     cartSideBarListEle.innerHTML = "Chưa có sản phẩm"
     return
@@ -80,9 +82,59 @@ let renderCartSideBarListProduct = (arr =[]) => {
   })
 
   cartSideBarListEle.innerHTML = html
+  
 }
 
-renderCartSideBarListProduct(productCartSideBar)
+
+// render product cart page
+let productCartPage = getDataCartFromLocalStorage()
+let cartListProduct = document.querySelector(".cart-list")
+
+let renderCartListProduct = (arr = []) => {
+  cartListProduct.innerHTML = ""
+  let html = ""
+  updateTotalMoneyCartPage(arr)
+  if(arr.length == 0){
+    cartListProduct.innerHTML = "Chưa có sản phẩm"
+    return
+  }
+
+  arr.forEach((p) =>{
+    html += `<li class="cart-item">
+    <div class="cart-image">
+        <a href="./deital.html?id=${p.id}">
+            <img src=${p.image} alt="">
+        </a>
+    </div>
+    <div class="cart-info">
+        <h6>${p.name}</h6>
+        <div class="cart-price">
+            <p class="item-price">${p.price}</p>
+            <p class="item-price-total">${p.count*p.price}</p>
+        </div>
+        <div class="cart-action-group">
+            <div class="cart-action">
+                <button class="action-minus" onclick = 'minusProduct(${p.id})'>
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+                <input class="action-input" type="text" name="" id="" value="${p.count}">
+                <button class="action-plus" onclick = 'plusProduct(${p.id})'>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <button class="action-delete" onclick = 'removeProduct(${p.id})'>
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        </div>
+    </div>
+    </li>`
+  })
+
+  cartListProduct.innerHTML = html
+  
+}
+
+
 
 // minus count cart-sidebar
 let minusProduct = (id) =>{
@@ -93,6 +145,7 @@ let minusProduct = (id) =>{
   }
   setDataCartToLocalStorage(items)
   renderCartSideBarListProduct(items)
+  renderCartListProduct(items)
 }
 
 // plus count cart-sidebar
@@ -102,6 +155,7 @@ let plusProduct = (id) =>{
   product.count++
   setDataCartToLocalStorage(items)
   renderCartSideBarListProduct(items)
+  renderCartListProduct(items)
 }
 
 // remove item cart-sidebar
@@ -110,13 +164,51 @@ let removeProduct = (id) =>{
   let itemsNew = items.filter(p => p.id != id)
   setDataCartToLocalStorage(itemsNew)
   renderCartSideBarListProduct(itemsNew)
+  renderCartListProduct(itemsNew)
   updateTotalCartSidebar()
 }
+
+// Tổng tiền cart-sidebar
+let totalMoneyCartSidebar = document.querySelector(".cart-sidebar-checkout-price")
+
+let updateTotalMoneyCartSidebar = (arr =[]) =>{
+  if(arr.length != 0){
+    totalMoneyCartSidebar.style.display = "block"
+    let total = arr.reduce((t,p) =>{
+      return t + p.count*p.price
+    },0)
+    totalMoneyCartSidebar.innerHTML = total
+  } else {
+    totalMoneyCartSidebar.style.display = "none"
+  }
+}
+
+// tổng tiền cart page
+let totalMoneyCartPage = document.querySelector(".bill-total")
+
+let updateTotalMoneyCartPage =(arr =[]) =>{
+  let cartOrderBill = document.querySelector(".cart-order-bill")
+  if(arr.length != 0){
+    cartOrderBill.style.display = "flex"
+    let total = arr.reduce((t,p) =>{
+      return t + p.count*p.price
+    },0)
+    totalMoneyCartPage.innerHTML = total
+  } else{
+    cartOrderBill.style.display = "none"
+  }
+}
+
+updateTotalMoneyCartPage(productCartPage)
 
 let updateTotalCartSidebar = () =>{
   let cart = getDataCartFromLocalStorage()
   document.querySelector(".cart-sidebar-total span").innerHTML = cart.length
   document.querySelector(".header-cart-number p").innerHTML = cart.length
+  document.querySelector(".cart-detail p strong").innerHTML = cart.length
 }
 
+renderCartListProduct(productCartPage)
+renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+
