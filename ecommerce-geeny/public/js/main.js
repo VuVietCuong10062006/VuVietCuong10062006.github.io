@@ -74,6 +74,48 @@ navSidebarClose.addEventListener('click',() =>{
   overlayEle.style.display = "none"
 })
 
+// render product search
+let headerSearchResponsiveIcon = document.querySelector(".header-search-responsive")
+let headerSearchEle = document.querySelector(".header-search")
+headerSearchResponsiveIcon.addEventListener('click',() =>{
+  headerSearchEle.classList.toggle("header-search-active")
+});
+
+let searchProductList = document.querySelector(".search-product-list")
+let headerSearchInput = document.querySelector(".header-search input")
+
+let renderSearchProducList = (arr = []) =>{
+  searchProductList.innerHTML =""
+  let html = ""
+  arr.forEach((p) =>{
+    html += `<li class="search-product-item">
+    <a href="./page/deital.html?id=${p.id}">
+      <div class="search-product-image">
+        <img src=${p.images[0]} alt="">
+      </div>
+      <div class="search-product-content">
+        <h6>${p.name}</h6>
+        <p>${p.price}</p>
+      </div>
+    </a>
+    </li>`
+  })
+  searchProductList.innerHTML =html
+}
+
+renderSearchProducList(products)
+
+headerSearchInput.addEventListener("input",(e) =>{
+  searchProductHeader()
+})
+
+let searchProductHeader = () =>{
+  let inputValue = headerSearchInput.value
+  let productFilter = products.filter(p => p.name.toLowerCase().includes(inputValue.toLowerCase()))
+  renderSearchProducList(productFilter)
+}
+
+
 // render product sell
 let productListSell = document.querySelector('.product-list-sell')
 let productSells = products.filter((p) =>{

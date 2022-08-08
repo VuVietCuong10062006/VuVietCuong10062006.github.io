@@ -35,7 +35,11 @@ const getDataRegisterFromLocalStorage = () => {
     if(localStorageValue) {
         return JSON.parse(localStorageValue)
     } else {
-        return [];
+        return [{
+            name : 123456789,
+            passwork : 123456789,
+            email : 123456789
+        }];
     }
 }
 function checkValidate() {
