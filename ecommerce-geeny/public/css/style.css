@@ -1027,6 +1027,10 @@
     background-color: #f5f6f7;
 }
 
+.promo img{
+    border-radius: 8px;
+}
+
 .promo .container{
     max-width: 1180px;
 }
@@ -1587,13 +1591,6 @@
 
 /* responsive*/
 
-@media (max-width: 575px){
-    .testimonial-card  p {
-        font-size: 18px;
-        line-height: 28px;
-    }
-}
-
 @media (max-width: 768px){
     .header-content .btn-nav-sidebar{
         display:block;
@@ -1638,10 +1635,23 @@
     .navbar-bot{
         display: none;
     }
+
+    .countdown-image{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 575px){
+    .testimonial-card  p {
+        font-size: 18px;
+        line-height: 28px;
+    }
 }
 
 @media (max-width: 390px){
     
+    /* header */
     .header-group .header-wish{
         margin-right: 5px;
         height: 30px;
@@ -1724,6 +1734,7 @@
         height: 35px;
     }
 
+    /* cart-sidebar */
     .cart-sidebar{
         width: 300px;
     }
@@ -1761,5 +1772,94 @@
     .cart-sidebar-cartpage{
         margin-left: 10px;
         padding: 5px;
+    }
+
+    /* banner */
+    .banner-content h1{
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .banner-content .banner-btn{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    /* sell */
+    
+    .sell{
+        padding-top: 50px;
+    }
+
+    /* promo */
+    .sell-tittle h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .promo{
+        padding-top: 50px;
+    }
+
+    /* feature */
+    .feature{
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .feature-title h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    /* countdown */
+    .countdown{
+        margin-bottom: 50px;
+    }
+
+    .countdown-time{
+        padding: 20px;
+    }
+
+    .countdown-time::before{
+        top: 25%
+    }
+
+    .countdown-time span{
+        font-size: 35px;
+    }
+
+    .countdown-time p{
+        font-size: 16px;
+    }
+
+    .countdown-btn{
+        margin-bottom: 20px;
+    }
+    /* testimonial */
+    .testimonial-title h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    /* intro */
+    .intro{
+        margin-top: 50px;
+    }
+    /* footer */
+    .footer{
+        padding-top: 50px;
+    }
+
+    .footer-contact ul p {
+        margin: 0;
+    }
+
+    .footer-bottom{
+        margin: 0;
+    }
+
+    .footer-card img{
+        margin-bottom: 5px;
     }
 }

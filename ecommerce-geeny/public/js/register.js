@@ -8,6 +8,15 @@ const cfPassworkEle = document.getElementById('cf-passwork')
 const btnRegister = document.getElementById('btn-register');
 const inputEles = document.querySelectorAll('.input-row');
 
+const getDataRegisterFromLocalStorage = () => {
+    const localStorageValue = localStorage.getItem("register");
+    if(localStorageValue) {
+        return JSON.parse(localStorageValue)
+    } else {
+        return [];
+    }
+}
+
 btnRegister.addEventListener('click', function () {
     Array.from(inputEles).map((ele) =>
         ele.classList.remove('success', 'error')
@@ -19,18 +28,20 @@ btnRegister.addEventListener('click', function () {
     let cfPassWorkValue = cfPassworkEle.value
     if (isValid) {
         alert('Gửi đăng ký thành công');
-        let register = [
-            {
-                name : usernameValue,
-                passwork : passworkValue,
-                email : emailValue,
-                cfpasswork : cfPassWorkValue
-            }
-        ]
-    
+        let register =getDataRegisterFromLocalStorage()
+
+        register.push({
+            name : usernameValue,
+            passwork : passworkValue,
+            email : emailValue,
+            cfpasswork : cfPassWorkValue
+        })
+            
+        window.location.href ="./login.html"
         localStorage.setItem("register",JSON.stringify(register))
     }
 });
+
 
 function checkValidate() {
     let usernameValue = usernameEle.value;

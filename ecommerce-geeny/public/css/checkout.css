@@ -211,6 +211,7 @@
     padding: 10px;
     border: 1px solid #e8e8e8;
     border-radius: 8px;
+    margin-bottom: 5px;
 }
 
 .checkout .payments{
@@ -268,3 +269,63 @@
     font-size: 16px;
 }
 
+
+@media (max-width: 768px) {
+    .checkout-order{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .checkout-info{
+        padding: 0;
+        border: 0;
+    }
+
+    .payments h2 {
+        margin-bottom: 16px;
+    }
+
+    .order-discount-btn button{
+        padding: 10px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .input-address-detail select{
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .info-ship input{
+        padding: 10px;
+    }
+
+    .checkout .confirm button{
+        width: 200px;
+    }
+}
+
+@media (max-width:390px) {
+    .checkout-order{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .checkout-info{
+        padding: 0;
+        border: 0;
+    }
+
+    .info-ship-input select{
+        padding: 0 5px;
+        font-size: 14px;
+    }
+
+    .checkout .confirm button{
+        width: 200px;
+    }
+
+    .payments h2 {
+        margin-bottom: 16px;
+    }
+}

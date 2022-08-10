@@ -407,3 +407,18 @@
     background-color: #119744;
     color: #fff;
 }
+
+@media (max-width: 390px){
+    .pagination{
+        margin-bottom: 30px;
+    }
+
+    .shop-banner {
+        padding: 60px 0px;
+        margin-bottom: 50px;
+    }
+
+    .shop-banner h2{
+        font-size: 32px;
+    }
+}

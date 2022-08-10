@@ -4,7 +4,15 @@ $(document).ready(function(){
         autoplay:true,
         arrows: true,
         prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+        responsive: [
+          {
+            breakpoint: 769,
+            settings:{
+              arrows : false
+            }
+          }
+        ]
     });
 });
 
@@ -73,6 +81,46 @@ navSidebarClose.addEventListener('click',() =>{
   navSidebar.classList.remove('nav-sidebar-active')
   overlayEle.style.display = "none"
 })
+
+// render User
+const getDataInfoUserFromLocalStorage = () => {
+  const localStorageValue = localStorage.getItem("infoUser");
+  if(localStorageValue) {
+      return JSON.parse(localStorageValue)
+  } else {
+      return []
+  }
+}
+
+console.log(getDataInfoUserFromLocalStorage())
+
+let headerAccount = document.querySelector(".header-content :nth-child(4)")
+let headerAccountClone = document.querySelector(".header-account-clone")
+
+let renderHeaderAccount = (arr = []) => {
+  if(arr.length !== 0){
+    headerAccount.innerHTML = ""
+    let html = ""
+    arr.forEach((p) =>{
+      html += `<img src=${p.imageUser} alt="Account">`
+    })
+    headerAccount.innerHTML = html
+  }
+}
+
+let renderHeaderAccountClone = (arr = []) => {
+  if(arr.length !== 0){
+    headerAccountClone.innerHTML = ""
+    let html = ""
+    arr.forEach((p) =>{
+      html += `<img src=${p.imageUser} alt="Account">`
+    })
+    headerAccountClone.innerHTML = html
+  }
+}
+
+renderHeaderAccountClone(getDataInfoUserFromLocalStorage())
+renderHeaderAccount(getDataInfoUserFromLocalStorage())
 
 // render product search
 let headerSearchResponsiveIcon = document.querySelector(".header-search-responsive")

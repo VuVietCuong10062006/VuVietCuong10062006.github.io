@@ -38,6 +38,47 @@ navSidebarClose.addEventListener('click',() =>{
   overlayEle.style.display = "none"
 })
 
+// render User
+const getDataInfoUserFromLocalStorage = () => {
+  const localStorageValue = localStorage.getItem("infoUser");
+  if(localStorageValue) {
+      return JSON.parse(localStorageValue)
+  } else {
+      return []
+  }
+}
+
+console.log(getDataInfoUserFromLocalStorage())
+
+let headerAccount = document.querySelector(".header-content :nth-child(4)")
+let headerAccountClone = document.querySelector(".header-account-clone")
+
+let renderHeaderAccount = (arr = []) => {
+  if(arr.length !== 0){
+    headerAccount.innerHTML = ""
+    let html = ""
+    arr.forEach((p) =>{
+      html += `<img src=${p.imageUser} alt="Account">`
+    })
+    headerAccount.innerHTML = html
+  }
+}
+
+let renderHeaderAccountClone = (arr = []) => {
+  if(arr.length !== 0){
+    headerAccountClone.innerHTML = ""
+    let html = ""
+    arr.forEach((p) =>{
+      html += `<img src=${p.imageUser} alt="Account">`
+    })
+    headerAccountClone.innerHTML = html
+  }
+}
+
+
+renderHeaderAccountClone(getDataInfoUserFromLocalStorage())
+renderHeaderAccount(getDataInfoUserFromLocalStorage())
+
 // render product search
 let headerSearchResponsiveIcon = document.querySelector(".header-search-responsive")
 let headerSearchEle = document.querySelector(".header-search")
@@ -134,6 +175,17 @@ let renderProductShop = (arr = []) =>{
 }
 
 renderProductShop(products)
+
+// panigation
+// let paginationEle = document.querySelector(".")
+
+// $('.shop-panigation').pagination({
+//   dataSource: products,
+//   callback: function(data, pagination) {
+//     renderProductShop(products)
+//   }
+// })
+
 
 // filter by price
 let searchPriceMinInput = document.querySelector(".search-price-min")

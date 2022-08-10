@@ -3,6 +3,10 @@
     max-width: 1180px;
 }
 
+.cart-detail{
+    margin-right: 50px;
+}
+
 .cart-detail-title{
     color: #39404a;
     font-size: 24px;
@@ -179,3 +183,21 @@
 .order-pay-button:hover{
     background-color: #39404a;
 }
+
+@media (max-width: 768px) {
+    .cart-detail{
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 390px) {
+    .cart-detail{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .cart-order .bill-total{
+        font-size: 20px;
+    }
+}
+

@@ -64,7 +64,7 @@
 }
 
 .testimonial-quote{
-    width: 600px;
+    flex: 1;
 }
 
 .testimonial-quote i{
@@ -181,5 +181,15 @@
     text-transform: capitalize;
     color: #555555;
     line-height: 26px;
+}
+
+@media (max-width: 390px) {
+    .testimonial-content{
+        flex-direction: column;
+    }
+    
+    .testimonial-img{
+        margin: auto;
+    }
 }
 
