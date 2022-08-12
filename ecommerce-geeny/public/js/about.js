@@ -82,7 +82,6 @@ const getDataInfoUserFromLocalStorage = () => {
   }
 }
 
-console.log(getDataInfoUserFromLocalStorage())
 
 let headerAccount = document.querySelector(".header-content :nth-child(4)")
 let headerAccountClone = document.querySelector(".header-account-clone")

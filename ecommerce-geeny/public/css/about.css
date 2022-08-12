@@ -191,5 +191,36 @@
     .testimonial-img{
         margin: auto;
     }
+
+    .introduce-content h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .introduce-content p{
+        font-size: 14px;
+    }
+
+    .introduce-image {
+        margin-bottom: 30px;
+    }
+
+    .about-testimonial{
+        padding: 40px 0;
+    }
+
+    .testimonial-quote p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about-team-title h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .about-team-title {
+        margin: 40px 0;
+    }
 }
 

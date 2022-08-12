@@ -47,7 +47,6 @@ const getDataInfoUserFromLocalStorage = () => {
   }
 }
 
-console.log(getDataInfoUserFromLocalStorage())
 
 let headerAccount = document.querySelector(".header-content :nth-child(4)")
 let headerAccountClone = document.querySelector(".header-account-clone")
@@ -313,3 +312,51 @@ let updateTotalCartSidebar = () =>{
 renderCartSideBarListProduct(productCartSideBar)
 renderProductCheckout(productCheckout)
 updateTotalCartSidebar()
+
+
+// select provinces
+
+let citisELe = document.getElementById("citis")
+let districtsEle = document.getElementById("district")  
+let wardsEle = document.getElementById("ward")
+
+let getApiProvinces = async() =>{
+  try{
+    let res = await axios.get("https://provinces.open-api.vn/api/?depth=3")
+    let citis = res.data
+
+    renderCitis(citis)
+
+  } catch(error){
+    console.log(error)
+  }
+}
+
+let renderCitis = (arr) =>{
+  arr.forEach((c) =>{
+    citisELe.insertAdjacentHTML('beforeend',`<option value="${c.name}">${c.name}</option>`)
+  })
+
+  citisELe.addEventListener("change", (e) =>{
+    districtsEle.length = 1
+    wardsEle.length = 1
+
+    let districtData = arr.filter((c) => c.name == e.target.value)[0].districts
+    districtData.forEach((d) =>{
+      districtsEle.insertAdjacentHTML("beforeend",`<option value="${d.name}">${d.name}</option>`)
+    })
+
+  })
+
+  districtsEle.addEventListener("change",(e) =>{
+    wardsEle.length = 1
+    let districtData = arr.filter((c) => c.name == citisELe.value)[0].districts
+    let ward = districtData.filter((w) => w.name == districtsEle.value)[0].wards
+    ward.forEach((w) =>{
+      wardsEle.insertAdjacentHTML("beforeend",`<option value="${w.name}">${w.name}</option>`)
+    })
+  })
+}
+
+getApiProvinces()
+

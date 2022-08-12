@@ -92,7 +92,6 @@ const getDataInfoUserFromLocalStorage = () => {
   }
 }
 
-console.log(getDataInfoUserFromLocalStorage())
 
 let headerAccount = document.querySelector(".header-content :nth-child(4)")
 let headerAccountClone = document.querySelector(".header-account-clone")
@@ -416,3 +415,42 @@ let updateTotalCartSidebar = () =>{
 
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+
+// countdown
+let countDownDate = new Date("Jan 5, 2023 15:37:25").getTime()
+
+let x = setInterval(() =>{
+  let now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  let distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  let countdownLock = document.querySelector(".countdown-clock")
+  countdownLock.innerHTML = `<span class="countdown-time">
+    <span>${days}</span>
+    <small>Ngày</small>
+  </span>
+  <span span class="countdown-time">
+    <span>${hours}</span>
+    <small>Giờ</small>
+  </span>
+  <span class="countdown-time">
+    <span>${minutes}</span>
+    <small>Phút</small>
+  </span>
+  <span class="countdown-time">
+    <span>${seconds}</span>
+    <small>Giây</small>
+  </span>`
+
+  if (distance < 0) {
+    clearInterval(x);
+    countdownLock.innerHTML = "EXPIRED";
+  }
+},1000)
