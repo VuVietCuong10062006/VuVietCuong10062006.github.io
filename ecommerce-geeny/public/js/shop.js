@@ -48,7 +48,6 @@ const getDataInfoUserFromLocalStorage = () => {
   }
 }
 
-console.log(getDataInfoUserFromLocalStorage())
 
 let headerAccount = document.querySelector(".header-content :nth-child(4)")
 let headerAccountClone = document.querySelector(".header-account-clone")
@@ -124,11 +123,14 @@ let searchProductHeader = () =>{
 // render product
 let productList = document.querySelector(".shop-product-list")
 
+
+
+
 let renderProductShop = (arr = []) =>{
   productList.innerHTML = ""
   let html = ""
   arr.forEach((p,i) =>{
-    if(i<=30){
+    if(i >= start && i < end){
       html += `<div class="col">
       <div class="product-card">
           <div class="product-image">
@@ -174,17 +176,82 @@ let renderProductShop = (arr = []) =>{
   productList.innerHTML = html
 }
 
+// pagination
+let btnNext = document.querySelector(".btn-next")
+let btnPrev = document.querySelector(".btn-prev")
+
+let perPage = 8
+let currentPage = 1
+let start = 0
+let end = perPage 
+let totalPage = Math.ceil(products.length / perPage)
+
+
+let renderListPage = () =>{
+  for(i=1; i <= totalPage; i++){
+    btnNext.insertAdjacentHTML("beforebegin",`<li class="pagination-item pagination-page ${i == 1 ? 'pagination-item-active' :''}">${i}
+    </li>`)
+  }
+}
+renderListPage()
+
+
+let btnPage = document.querySelectorAll(".pagination-page")
+
+Array.from(btnPage).forEach((page,i) =>{
+  page.addEventListener("click", (e) => {
+    let pageActive = document.querySelectorAll(".pagination-item-active")
+    Array.from(pageActive).forEach((p) =>{
+      p.classList.remove("pagination-item-active")
+    })
+    e.target.classList.add("pagination-item-active")
+    currentPage = i+1
+    start = (currentPage - 1)*perPage
+    end = currentPage*perPage
+    renderProductShop(products)
+  })
+})
+
+
+btnNext.addEventListener("click", (e) =>{
+  currentPage++
+  if(currentPage > totalPage){
+    currentPage = totalPage
+  }
+
+  Array.from(btnPage).forEach((page,i) =>{
+    if(i == currentPage-1){
+      page.classList.add("pagination-item-active")
+    }else{
+      page.classList.remove("pagination-item-active")
+    }
+  })
+
+  start = (currentPage - 1)*perPage
+  end = currentPage*perPage
+  renderProductShop(products)
+})
+
+btnPrev.addEventListener("click", (e) =>{
+  currentPage--
+  if(currentPage <= 1){
+    currentPage = 1
+  }
+
+  Array.from(btnPage).forEach((page,i) =>{
+    if(i == currentPage-1){
+      page.classList.add("pagination-item-active")
+    }else{
+      page.classList.remove("pagination-item-active")
+    }
+  })
+
+  start = (currentPage - 1)*perPage
+  end = currentPage*perPage
+  renderProductShop(products)
+})
+
 renderProductShop(products)
-
-// panigation
-// let paginationEle = document.querySelector(".")
-
-// $('.shop-panigation').pagination({
-//   dataSource: products,
-//   callback: function(data, pagination) {
-//     renderProductShop(products)
-//   }
-// })
 
 
 // filter by price
@@ -207,20 +274,27 @@ let searchProductPrice = () =>{
 // filter by tag
 let inputTags = document.querySelectorAll(".checkbox-tag")
 let productFilterTag = []
+let checkedNumberTag = 0
 Array.from(inputTags).forEach((input) =>{
   input.addEventListener("change",(e) =>{
     let inputValue = e.target.value
     if(e.target.checked == true){
+      checkedNumberTag ++
       let productFilterTrue = products.filter((p) =>{
         return p.tag == inputValue
       })
       productFilterTag = productFilterTag.concat(productFilterTrue)
       renderProductShop(productFilterTag)
     } else{
+      checkedNumberTag --
       productFilterTag = productFilterTag.filter((p) =>{
         return p.tag != inputValue
       })
       renderProductShop(productFilterTag)
+    }
+
+    if(checkedNumberTag == 0){
+      renderProductShop(products)
     }
   })
 })
@@ -228,20 +302,27 @@ Array.from(inputTags).forEach((input) =>{
 // filter by category
 let inputCategorys = document.querySelectorAll(".checkbox-category")
 let productFilterCategory = []
+let checkedNumberCategory = 0
 Array.from(inputCategorys).forEach((input) =>{
   input.addEventListener("change",(e) =>{
     let inputValue = e.target.value
     if(e.target.checked == true){
+      checkedNumberCategory ++
       let productFilterTrue = products.filter((p) =>{
         return p.category == inputValue
       })
       productFilterCategory = productFilterCategory.concat(productFilterTrue)
       renderProductShop(productFilterCategory)
     } else{
+      checkedNumberCategory --
       productFilterCategory = productFilterCategory.filter((p) =>{
         return p.category != inputValue
       })
       renderProductShop(productFilterCategory)
+    }
+
+    if(checkedNumberCategory == 0){
+      renderProductShop(products)
     }
   })
 })
@@ -249,20 +330,27 @@ Array.from(inputCategorys).forEach((input) =>{
 // filter by rating
 let inputRating = document.querySelectorAll(".checkbox-rating")
 let productFilterRating = []
+let checkedNumberRating = 0
 Array.from(inputRating).forEach((input) =>{
   input.addEventListener("change",(e) =>{
     let inputValue = e.target.value
     if(e.target.checked == true){
+      checkedNumberRating ++
       let productFilterTrue = products.filter((p) =>{
         return p.rating == inputValue
       })
       productFilterRating = productFilterRating.concat(productFilterTrue)
       renderProductShop(productFilterRating)
     } else{
+      checkedNumberRating --
       productFilterRating = productFilterRating.filter((p) =>{
         return p.rating != inputValue
       })
       renderProductShop(productFilterRating)
+    }
+
+    if(checkedNumberRating == 0){
+      renderProductShop(products)
     }
   })
 })
@@ -280,7 +368,7 @@ selectOptionEle.addEventListener("change", (e) =>{
       return b.price - a.price
     })
     renderProductShop(productSortDown)
-  }
+  } 
 })
 
 // add productShop to cart-sidebar

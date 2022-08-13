@@ -44,6 +44,23 @@ $('.testimonial-slick').slick({
     ]
   });
 
+
+// back top
+let backTop = document.querySelector('.back-top');
+
+window.addEventListener("scroll",() =>{
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+    backTop.classList.add("back-top-active")
+  }else{
+    backTop.classList.remove("back-top-active")
+  }
+})
+
+backTop.addEventListener("click", () =>{
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+})
+
 // cart sidebar
 
 let headerCart = document.querySelector(".header-cart")
