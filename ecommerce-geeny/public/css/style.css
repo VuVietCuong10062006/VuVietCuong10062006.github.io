@@ -57,6 +57,7 @@
 }
 
 .header-account{
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -71,6 +72,28 @@
     border-radius: 50%;
 }
 
+.account{
+    position: relative;
+}
+
+.account img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.account-clone{
+    position: relative;
+    display: none;
+}
+
+.account-clone img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
 .header-account p{
     font-size: 15px;
     font-weight: 400;
@@ -79,6 +102,75 @@
     line-height: 26px;
     color: #555555;
     margin-bottom: 0px;
+}
+
+ .action {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: #fff;
+    box-shadow:  0 2px 6px 0 rgb(50 50 50 / 33%);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 5;
+    display: none;
+}
+
+ .action-active{
+    display: block;
+}
+
+.header-content .action .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.header-content .action .info h4{
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.header-content .action .info p{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.header-content .action img{
+    width: 60px;
+    height: 60px;
+}
+
+.header-content .action ul{
+    padding: 0;
+    margin: 0;
+    padding-top: 8px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.header-content .action ul li{
+    display: flex;
+    align-items:center;
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.header-content .action ul li:hover{
+    background-color: #119744;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-content .action ul li span{
+    margin-left: 10px;
+    font-size: 12px;
 }
 
 .header-search{
@@ -1644,10 +1736,29 @@
         display: none;
     }
     
+    .account{
+        display: none;
+    }
+
+    .account-clone{
+        display: flex;
+        margin-left: 20px;
+    }
+
+    .account-clone img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .action{
+        left: 0;
+    }
+
     .header-account-clone{
         display: flex;
         margin-left: 20px;
     }
+
     .header-logo{
         flex: 1;
         text-align: center;
@@ -1733,6 +1844,20 @@
     .header-account-clone img{
         width: 30px;
         height: 30px;
+    }
+
+    .account-clone{
+        display: flex;
+        margin-left: 0;
+    }
+
+    .account-clone img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .action{
+        left: 0;
     }
 
     .btn-nav-sidebar{

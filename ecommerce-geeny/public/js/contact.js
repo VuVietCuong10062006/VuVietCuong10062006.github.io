@@ -42,36 +42,124 @@ const getDataInfoUserFromLocalStorage = () => {
   }
 }
 
-console.log(getDataInfoUserFromLocalStorage())
-
-let headerAccount = document.querySelector(".header-content :nth-child(4)")
+// let headerAccount = document.querySelector(".header-content :nth-child(4)")
+let account = document.querySelector(".account")
+let accountClone = document.querySelector(".account-clone")
+let headerAccount = document.querySelector(".account .header-account")
 let headerAccountClone = document.querySelector(".header-account-clone")
 
 let renderHeaderAccount = (arr = []) => {
   if(arr.length !== 0){
-    headerAccount.innerHTML = ""
+    account.innerHTML = ""
     let html = ""
     arr.forEach((p) =>{
-      html += `<img src=${p.imageUser} alt="Account">`
+      html += `<img src="${p.imageUser} alt="Account">
+      <div class="action">
+        <div class="info">
+          <img src=${p.imageUser} alt="">
+          <h4>${p.name}</h4>
+          <p>${p.email}</p>
+        </div>
+        <ul>
+          <li class="logout">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            <span>Đăng xuất</span>
+          </li>
+        </ul>
+      </div>`
     })
-    headerAccount.innerHTML = html
+    account.innerHTML = html
+  }else{
+    account.innerHTML = `<a href="../page/login.html" class="header-account">
+    <img src="../public/image/logo/user.png" alt="Account">
+    </a>
+    <div class="action">
+    <div class="info">
+      <img src="../public/image/avatar/avatar-1.jpg" alt="">
+      <h4>Vũ Việt Cường</h4>
+      <p>vuvietcuong@gmail.com</p>
+    </div>
+    <ul>
+      <li class="logout">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        <span>Đăng xuất</span>
+      </li>
+    </ul>`
   }
 }
 
 let renderHeaderAccountClone = (arr = []) => {
   if(arr.length !== 0){
-    headerAccountClone.innerHTML = ""
+    accountClone.innerHTML = ""
     let html = ""
     arr.forEach((p) =>{
-      html += `<img src=${p.imageUser} alt="Account">`
+      html += `<img src="${p.imageUser} alt="Account">
+      <div class="action">
+        <div class="info">
+          <img src=${p.imageUser} alt="">
+          <h4>${p.name}</h4>
+          <p>${p.email}</p>
+        </div>
+        <ul>
+          <li class="logout">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            <span>Đăng xuất</span>
+          </li>
+        </ul>
+      </div>`
     })
-    headerAccountClone.innerHTML = html
+    accountClone.innerHTML = html
+  }else{
+    accountClone.innerHTML = `<a href="../page/login.html" class="header-account header-account-clone">
+    <img src="../public/image/logo/user.png" alt="Account">
+    </a>
+    <div class="action">
+    <div class="info">
+      <img src="../public/image/avatar/avatar-1.jpg" alt="">
+      <h4>Vũ Việt Cường</h4>
+      <p>vuvietcuong@gmail.com</p>
+    </div>
+    <ul>
+      <li class="logout">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        <span>Đăng xuất</span>
+      </li>
+    </ul>
+    </div>`
   }
 }
 
-
 renderHeaderAccountClone(getDataInfoUserFromLocalStorage())
 renderHeaderAccount(getDataInfoUserFromLocalStorage())
+
+
+let logout = document.querySelector(".account .logout")
+let logoutClone = document.querySelector(".account-clone .logout")
+let action = document.querySelector(".account .action")
+let actionClone = document.querySelector(".account-clone .action")
+
+
+account.addEventListener('click',(e) =>{ 
+  if(getDataInfoUserFromLocalStorage().length != 0){
+    action.classList.toggle("action-active")
+  }
+})
+
+accountClone.addEventListener('click',(e) =>{
+  if(getDataInfoUserFromLocalStorage().length!= 0){
+    actionClone.classList.toggle("action-active")
+  }
+})
+
+logout.addEventListener('click',(e) =>{
+  localStorage.setItem("infoUser",JSON.stringify([]))
+  renderHeaderAccount([])
+})
+
+logoutClone.addEventListener('click',(e) =>{
+  localStorage.setItem("infoUser",JSON.stringify([]))
+  renderHeaderAccountClone([])
+})
 
 // render product search
 let headerSearchResponsiveIcon = document.querySelector(".header-search-responsive")
