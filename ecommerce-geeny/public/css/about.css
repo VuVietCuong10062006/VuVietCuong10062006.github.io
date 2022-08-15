@@ -183,6 +183,16 @@
     line-height: 26px;
 }
 
+@media (max-width: 768px) {
+    .about-introduce .container .row:nth-child(2){
+        flex-wrap: wrap-reverse;
+    }
+
+    .about-introduce .container .row{
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 390px) {
     .testimonial-content{
         flex-direction: column;

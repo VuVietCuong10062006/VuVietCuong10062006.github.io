@@ -238,6 +238,19 @@
         font-size: 14px;
     }
     
+    .blogs-content ul li{
+        margin-right: 15px;
+    }
+
+    .blogs-content h4{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .blogs-content p{
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 @media(max-width: 390px){

@@ -1923,8 +1923,14 @@
 
     /* banner */
     .banner-content h1{
-        font-size: 38px;
-        line-height: 48px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .banner-content p{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
     }
 
     .banner-content .banner-btn{
@@ -1938,6 +1944,17 @@
         padding-top: 50px;
     }
 
+    .sell .product-rating i{
+        font-size: 12px;
+    }
+
+    .sell .product-name{
+        font-size: 15px;
+    }
+
+    .sell .product-price{
+        font-size: 15px;
+    }
     /* promo */
     .sell-tittle h2{
         font-size: 28px;
@@ -1959,6 +1976,31 @@
         line-height: 36px;
     }
 
+    .feature .feature-rating i{
+        font-size: 12px;
+    }
+
+    .feature .feature-price{
+        font-size: 15px;
+    }
+
+    .feature .feature-name{
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .feature .feature-desc{
+        display: none;
+    }
+
+    .feature-image{
+        width: 150px;
+    }
+
+    .feature .feature-content{
+        padding-left: 12px;
+        margin-left: 12px;
+    }
     /* countdown */
     .countdown{
         margin-bottom: 50px;
@@ -1970,6 +2012,19 @@
 
     .countdown-time::before{
         top: 25%
+    }
+
+    .countdown-content h3{
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .countdown-content p{
+        margin-bottom: 20px;
+    }
+
+    .countdown-clock{
+        margin-bottom: 20px;
     }
 
     .countdown-time span{

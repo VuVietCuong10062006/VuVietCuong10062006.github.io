@@ -405,6 +405,20 @@
     color: #fff;
 }
 
+@media (max-width: 768px){
+    .shop .product-rating i{
+        font-size: 12px;
+    }
+
+    .shop .product-name{
+        font-size: 15px;
+    }
+
+    .shop .product-price{
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 390px){
     .pagination{
         margin-bottom: 30px;
@@ -417,5 +431,17 @@
 
     .shop-banner h2{
         font-size: 32px;
+    }
+
+    .shop .product-rating i{
+        font-size: 12px;
+    }
+
+    .shop .product-name{
+        font-size: 15px;
+    }
+
+    .shop .product-price{
+        font-size: 15px;
     }
 }
