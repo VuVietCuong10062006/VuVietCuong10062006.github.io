@@ -450,3 +450,117 @@ let renderCitis = (arr) =>{
 
 getApiProvinces()
 
+// validate checkout
+
+let fullName = document.getElementById("fullname")
+let email = document.getElementById("email")
+let phone = document.getElementById("phone")
+let address = document.getElementById("address")
+let note = document.getElementById("note")
+let citis = document.getElementById("citis")
+let district = document.getElementById("district")
+let ward = document.getElementById("ward")
+let btnCheckout = document.querySelector(".confirm button")
+let inputEles = document.querySelectorAll('.info-ship-input');
+let paymentRadio = document.querySelectorAll("#payments")
+
+btnCheckout.addEventListener("click", (e) =>{
+  Array.from(inputEles).map((ele) =>
+    ele.classList.remove('success', 'error')
+  );
+
+  let isValid = checkValidate();
+  if(isValid){
+    alert("Thanh toán thành công")
+    window.location.href = "../index.html"
+  }
+})
+
+let checkValidate =() =>{
+  let isCheck = true
+  let fullNameValue = fullName.value
+  let emailValue = email.value
+  let phoneValue = phone.value
+  let addressValue = address.value
+  let citisValue = citis.value
+  let districtValue = district.value
+  let wardvalue = ward.value
+
+  if(fullNameValue == ''){
+    setError(fullName, 'Tên không được để trống');
+    isCheck = false;
+  }else {
+    setSuccess(fullName);
+  } 
+
+  if (emailValue == '') {
+    setError(email, 'Email không được để trống');
+    isCheck = false;
+  } else if (!isEmail(emailValue)) {
+    setError(email, 'Email không đúng định dạng');
+    isCheck = false;
+  } else {
+    setSuccess(email);
+  }
+
+  if (phoneValue == '') {
+    setError(phone, 'Số điện thoại không được để trống');
+    isCheck = false;
+  }else if (!isPhone(phoneValue)) {
+    setError(phone, 'Số điện thoại không đúng định dạng');
+    isCheck = false;
+  }else {
+    setSuccess(phone);
+  }
+
+  if(addressValue == ''){
+    setError(address, 'Địa chỉ không được để chống');
+    isCheck = false;
+  }else {
+    setSuccess(address);
+  } 
+
+  if(citisValue == ''){
+    setError(citis, 'Tỉnh thành không được để chống');
+    isCheck = false;
+  }else {
+    setSuccess(citis);
+  } 
+
+  if(districtValue== ''){
+    setError(district, 'Tỉnh thành không được để chống');
+    isCheck = false;
+  }else {
+    setSuccess(district);
+  } 
+
+  if(wardvalue== ''){
+    setError(ward, 'Tỉnh thành không được để chống');
+    isCheck = false;
+  }else {
+    setSuccess(ward);
+  } 
+
+  return isCheck
+}
+
+
+function setSuccess(ele) {
+  ele.parentNode.classList.add('success');
+}
+
+function setError(ele, message) {
+  let parentEle = ele.parentNode;
+  parentEle.classList.add('error');
+  parentEle.querySelector('small').innerText = message;
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email
+  );
+}
+
+function isPhone(number) {
+    return /(84|0[3|5|7|8|9])+([0-9]{8})\b/.test(number);
+}

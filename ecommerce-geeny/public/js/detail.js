@@ -266,9 +266,9 @@ renderImageThumb(product.images)
 
 let renderImageVideo = (arr=[]) =>{
   imageVideoEle.innerHTML =`<img src=${arr[1]} alt="">
-    <a href="">
-      <i class="fa-solid fa-circle-play"></i>
-    </a>`
+  <a href="https://www.youtube.com/watch?v=aRxymTETvXk" class="play-video" data-vbtype="video" data-autoplay="true">
+  <i class="fa-solid fa-circle-play"></i>
+  </a>`
 }
 
 renderImageVideo(product.images)
@@ -396,6 +396,11 @@ let updateTotalCartSidebar = () =>{
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
 
+
+// venobox
+new VenoBox({
+  selector: '.play-video'
+});
 
 // slick slider
 $('.details-preview').slick({

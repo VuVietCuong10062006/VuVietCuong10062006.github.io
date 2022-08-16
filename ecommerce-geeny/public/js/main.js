@@ -299,10 +299,10 @@ let renderProductSell = (arr = []) =>{
           <img src=${p.images[0]} alt="">
         </a>
         <div class="product-widget">
-          <a href="" class="product-video">
+          <a href="https://www.youtube.com/watch?v=aRxymTETvXk" class="product-video" data-vbtype="video" data-autoplay="true">
             <i class="fa-solid fa-play"></i>
           </a>
-          <a href="" class="product-view">
+          <a href="./page/deital.html?id=${p.id}" class="product-view">
             <i class="fa-solid fa-eye"></i>
           </a>
         </div>
@@ -355,10 +355,10 @@ let renderProductFeature = (arr = []) =>{
           <img src=${p.images[0]} alt="">
         </a>
         <div class="feature-widget">
-          <a href="" class="feature-video">
+          <a href="https://www.youtube.com/watch?v=aRxymTETvXk" class="feature-video" data-vbtype="video" data-autoplay="true">
             <i class="fa-solid fa-play"></i>
           </a>
-          <a href="" class="feature-view">
+          <a href="./page/deital.html?id=${p.id}" class="feature-view">
             <i class="fa-solid fa-eye"></i>
           </a>
         </div>
@@ -535,10 +535,8 @@ let countDownDate = new Date("Jan 5, 2023 15:37:25").getTime()
 let x = setInterval(() =>{
   let now = new Date().getTime();
     
-  // Find the distance between now and the count down date
   let distance = countDownDate - now;
     
-  // Time calculations for days, hours, minutes and seconds
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -567,3 +565,11 @@ let x = setInterval(() =>{
     countdownLock.innerHTML = "EXPIRED";
   }
 },1000)
+
+// venobox
+new VenoBox({
+  selector: '.product-video'
+});
+new VenoBox({
+  selector: '.feature-video'
+});

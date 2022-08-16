@@ -234,10 +234,10 @@ let renderProductShop = (arr = []) =>{
               <img src=${p.images[0]} alt="">
             </a>
             <div class="product-widget">
-              <a href="" class="product-video">
+              <a href="https://www.youtube.com/watch?v=aRxymTETvXk" class="product-video" data-vbtype="video" data-autoplay="true">
                 <i class="fa-solid fa-play"></i>
               </a>
-              <a href="" class="product-view">
+              <a href="./deital.html?id=${p.id}" class="product-view">
                 <i class="fa-solid fa-eye"></i>
               </a>
             </div>
@@ -581,3 +581,8 @@ let updateTotalCartSidebar = () =>{
 
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+
+// venobox
+new VenoBox({
+  selector: '.product-video'
+});

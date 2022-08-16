@@ -411,47 +411,55 @@
                         <div class="info-ship">
                             <h2>Thông tin vận chuyển</h2>
                             <p>
-                                Bạn có tài khoản chưa
+                                Bạn có tài khoản chưa?
                                 <a href="./login.html">Đăng nhập</a>
                             </p>
                             <div class="info-ship-input">
-                                <label for="fullname"></label>
+                                <!-- <label for="fullname"></label> -->
                                 <input type="text" id="fullname" name="fullname" placeholder="Tên đầy đủ">
+                                <small>Error message</small>
                             </div>
                             <div class="input-email-phone">
                                 <div class="info-ship-input">
-                                    <label for="email"></label>
+                                    <!-- <label for="email"></label> -->
                                     <input type="text" id="email" name="email" placeholder="Email">
+                                    <small>Error message</small>
                                 </div>
                                 <div class="info-ship-input">
-                                    <label for="phone"></label>
+                                    <!-- <label for="phone"></label> -->
                                     <input type="text" id="phone" name="phone" placeholder="Số điện thoại">
+                                    <small>Error message</small>
                                 </div>
                             </div>
                             <div class="info-ship-input">
-                                <label for="address"></label>
+                                <!-- <label for="address"></label> -->
                                 <input type="text" id="address" name="address" placeholder="Địa chỉ">
+                                <small>Error message</small>
                             </div>
                             <div class="input-address-detail">
                                 <div class="info-ship-input">
                                     <select name="province" id="citis">
                                         <option value="">Tỉnh / thành</option>
                                     </select>
+                                    <small>Error message</small>
                                 </div>
                                 <div class="info-ship-input">
                                     <select name="province" id="district">
                                         <option value="">Quận / huyện</option>
                                     </select>
+                                    <small>Error message</small>
                                 </div>
                                 <div class="info-ship-input">
                                     <select name="province" id="ward">
                                         <option value="">Xã / phường</option>
                                     </select>
+                                    <small>Error message</small>
                                 </div>
                             </div>
                             <div class="info-ship-input">
-                                <label for="note"></label>
+                                <!-- <label for="note"></label> -->
                                 <input type="text" id="note" name="note" placeholder="Ghi chú">
+                                <small>Error message</small>
                             </div>
                         </div>
                         <div class="payments">
@@ -469,7 +477,7 @@
                                 </label>
                             </div>
                             <div class="radio-wrapper">
-                                <input type="radio" name="payments" id="payments">
+                                <input type="radio" checked="checked" name="payments" id="payments">
                                 <label for="payments">
                                     <span>	Thanh toán khi nhận hàng (COD)</span>
                                 </label>
