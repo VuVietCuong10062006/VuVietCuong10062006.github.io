@@ -187,7 +187,7 @@ let renderSearchProducList = (arr = []) =>{
       </div>
       <div class="search-product-content">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
     </a>
     </li>`
@@ -232,7 +232,7 @@ let renderCartSideBarListProduct = (arr =[]) => {
     <div class="cart-sidebar-content">
       <div class="cart-sidebar-info">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
       <div class="cart-sidebar-action-group">
         <div class="product-action">
@@ -295,7 +295,7 @@ let updateTotalMoneyCartSidebar = (arr =[]) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    totalMoneyCartSidebar.innerHTML = total
+    totalMoneyCartSidebar.innerHTML = formatMoney(total)
   } else {
     totalMoneyCartSidebar.style.display = "none"
   }

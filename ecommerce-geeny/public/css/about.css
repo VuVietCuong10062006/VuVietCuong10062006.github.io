@@ -42,6 +42,14 @@
     max-width: 1180px;
 }
 
+.about-testimonial-title h2{
+    margin-bottom: 70px;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #39404a;
+} 
+
 .testimonial-slider{
     padding: 0;
 }
@@ -168,6 +176,7 @@
 
 .about-team-info{
     text-align: center;
+    margin-top: 10px;
 }
 
 .about-team-info h5{
@@ -184,12 +193,28 @@
 }
 
 @media (max-width: 768px) {
+    .about-testimonial-title h2{
+        margin-bottom: 50px;
+        font-size: 32px;
+        line-height: 48px;
+    } 
+
+    .testimonial-quote p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+
     .about-introduce .container .row:nth-child(2){
         flex-wrap: wrap-reverse;
     }
 
     .about-introduce .container .row{
         margin-bottom: 20px;
+    }
+
+    .about-team-title h2{
+        font-size: 32px;
+        line-height: 48px;
     }
 }
 
@@ -198,6 +223,12 @@
         flex-direction: column;
     }
     
+    .about-testimonial-title h2{
+        margin-bottom: 50px;
+        font-size: 28px;
+        line-height: 36px;
+    } 
+
     .testimonial-img{
         margin: auto;
     }

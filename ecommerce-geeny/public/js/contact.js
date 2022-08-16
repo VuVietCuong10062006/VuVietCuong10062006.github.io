@@ -182,7 +182,7 @@ let renderSearchProducList = (arr = []) =>{
       </div>
       <div class="search-product-content">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
     </a>
     </li>`
@@ -232,7 +232,7 @@ let renderCartSideBarListProduct = (arr =[]) => {
     <div class="cart-sidebar-content">
       <div class="cart-sidebar-info">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
       <div class="cart-sidebar-action-group">
         <div class="product-action">
@@ -295,7 +295,7 @@ let updateTotalMoneyCartSidebar = (arr =[]) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    totalMoneyCartSidebar.innerHTML = total
+    totalMoneyCartSidebar.innerHTML = formatMoney(total)
   } else {
     totalMoneyCartSidebar.style.display = "none"
   }
@@ -309,3 +309,91 @@ let updateTotalCartSidebar = () =>{
 
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+
+// validate contact
+let userName = document.getElementById("username")
+let email = document.getElementById("email")
+let phone = document.getElementById("phone")
+let message =document.getElementById("message")
+
+let btnEle = document.querySelector(".form-group-btn")
+let inputEles = document.querySelectorAll('.form-group-input');
+
+
+btnEle.addEventListener("click",(e) =>{
+  Array.from(inputEles).map((ele) =>
+    ele.classList.remove('success', 'error')
+  );
+
+  let isValid = checkValidate()
+  if(isValid){
+    alert("Gửi tin nhắn thành công")
+  }
+})
+
+function checkValidate(){
+  let usernameValue = userName.value
+  let emailValue = email.value
+  let phoneValue = phone.value
+  let messageValue = message.value
+
+  isCheck = true
+  if(usernameValue == ""){
+    setError(userName, 'Tên không được để trống');
+    isCheck = false;
+  }else {
+    setSuccess(userName);
+  }
+
+  if (emailValue == '') {
+    setError(email, 'Email không được để trống');
+    isCheck = false;
+  } else if (!isEmail(emailValue)) {
+    setError(email, 'Email không đúng định dạng');
+    isCheck = false;
+  } else {
+    setSuccess(email);
+  }
+
+  if (phoneValue == '') {
+    setError(phone, 'Số điện thoại không được để trống');
+    isCheck = false;
+  } else if (!isPhone(phoneValue)) {
+    setError(phone, 'Số điện thoại không đúng định dạng');
+    isCheck = false;
+  } else {
+    setSuccess(phone);
+  }
+
+  if(messageValue == ""){
+    setError(message, 'Tên không được để trống');
+    isCheck = false;
+  }else {
+    setSuccess(message);
+  }
+
+  return isCheck
+}
+
+
+
+
+function setSuccess(ele) {
+  ele.parentNode.classList.add('success');
+}
+
+function setError(ele, message) {
+  let parentEle = ele.parentNode;
+  parentEle.classList.add('error');
+  parentEle.querySelector('small').innerText = message;
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email
+  );
+}
+
+function isPhone(number) {
+    return /(84|0[3|5|7|8|9])+([0-9]{8})\b/.test(number);
+}

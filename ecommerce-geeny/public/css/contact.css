@@ -71,6 +71,10 @@
     background-color: #fff;
 }
 
+.contact-map iframe{
+    width: 100%;
+}
+
 .contact-form h4{
     margin-bottom: 25px;
     color: #39404a;
@@ -103,6 +107,24 @@
 
 .form-group-input:focus-within i{
     color: #119744;
+}
+
+.form-group-input.success input{
+    border-color: #119744;
+}
+
+.form-group-input.error input{
+    border-color: #e74c3c;
+}
+
+.form-group-input small{
+    color: #e74c3c;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.form-group-input.error small{
+    visibility: visible;
 }
 
 .form-group-input i{

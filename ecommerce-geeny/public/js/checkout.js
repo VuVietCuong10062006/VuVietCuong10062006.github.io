@@ -188,7 +188,7 @@ let renderSearchProducList = (arr = []) =>{
       </div>
       <div class="search-product-content">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
     </a>
     </li>`
@@ -233,7 +233,7 @@ let renderCartSideBarListProduct = (arr =[]) => {
     <div class="cart-sidebar-content">
       <div class="cart-sidebar-info">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
       <div class="cart-sidebar-action-group">
         <div class="product-action">
@@ -283,7 +283,7 @@ let renderProductCheckout = (arr =[])=>{
     </div>
     <div class="order-product-content">
         <h6 class="order-product-name">${p.name}</h6>
-        <p class="order-product-price">${p.price}</p>
+        <p class="order-product-price">${formatMoney(p.price)}</p>
     </div>
     </li>`
   })
@@ -333,7 +333,7 @@ let updateTotalMoneyCartSidebar = (arr =[]) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    totalMoneyCartSidebar.innerHTML = total
+    totalMoneyCartSidebar.innerHTML = formatMoney(total)
   } else {
     totalMoneyCartSidebar.style.display = "none"
   }
@@ -353,8 +353,8 @@ let updateTotalMoney = (arr = []) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    subTotalMoney.innerHTML = total
-    totalMoney.innerHTML = total
+    subTotalMoney.innerHTML = formatMoney(total)
+    totalMoney.innerHTML = formatMoney(total)
   } else{
     orderBillEle.style.display = "none"
     discountBillEle.style.display = "none"
@@ -377,6 +377,10 @@ let buttonDiscountMoney = document.querySelector(".order-discount-btn button")
 discountMoney.parentNode.style.display = "none"
 
 buttonDiscountMoney.addEventListener("click", () =>{
+  let items = getDataCartFromLocalStorage()
+  let subTotal = items.reduce((t,p) =>{
+    return t + p.count*p.price
+  },0)
   let discountCode = inputDiscountMoney.value
   if(!discountCode){
     alert("Chưa nhập mã giảm giá")
@@ -385,8 +389,9 @@ buttonDiscountMoney.addEventListener("click", () =>{
       alert("Mã giảm giá chưa chính xác")
     } else {
       discountMoney.parentNode.style.display = "flex"
-      discountMoney.innerHTML = (subTotalMoney.innerHTML * promotionCode[discountCode]) / 100
-      totalMoney.innerHTML = subTotalMoney.innerHTML - discountMoney.innerHTML
+      discount = (subTotal * promotionCode[discountCode]) / 100
+      discountMoney.innerHTML = formatMoney(discount)
+      totalMoney.innerHTML = formatMoney(subTotal - discount)
     }
   }
 })

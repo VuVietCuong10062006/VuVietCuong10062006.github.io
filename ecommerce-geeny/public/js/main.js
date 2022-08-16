@@ -251,7 +251,7 @@ let renderSearchProducList = (arr = []) =>{
       </div>
       <div class="search-product-content">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
     </a>
     </li>`
@@ -259,6 +259,7 @@ let renderSearchProducList = (arr = []) =>{
   searchProductList.innerHTML =html
 }
 
+// // formatMoney
 // const formatMoney = number => {
 //   return number.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
 // }
@@ -317,7 +318,7 @@ let renderProductSell = (arr = []) =>{
           <a href="">(3)</a>
         </div>
         <h6 class="product-name">${p.name}</h6>
-        <h6 class="product-price">${p.price}</h6>
+        <h6 class="product-price">${formatMoney(p.price)}</h6>
         <button class="product-add" onclick = 'addProductSell(${p.id})'>
           <i class="fa-solid fa-basket-shopping"></i>
           <span>ADD</span>
@@ -374,7 +375,7 @@ let renderProductFeature = (arr = []) =>{
           <i class="${p.rating >=5 ?'active' :''} fa-solid fa-star"></i>
           <a href="">(3)</a>
         </div>
-        <h6 class="feature-price">${p.price}</h6>
+        <h6 class="feature-price">${formatMoney(p.price)}</h6>
         <p class="feature-desc">
           ${p.description}
         </p>
@@ -451,7 +452,7 @@ let renderCartSideBarListProduct = (arr =[]) => {
     <div class="cart-sidebar-content">
       <div class="cart-sidebar-info">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
       <div class="cart-sidebar-action-group">
         <div class="product-action">
@@ -514,7 +515,7 @@ let updateTotalMoneyCartSidebar = (arr =[]) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    totalMoneyCartSidebar.innerHTML = total
+    totalMoneyCartSidebar.innerHTML = formatMoney(total)
   } else {
     totalMoneyCartSidebar.style.display = "none"
   }

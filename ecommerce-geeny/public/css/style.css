@@ -679,10 +679,11 @@
 }
 
 .cart-sidebar-checkout-price{
-    padding: 0px 25px;
+    padding: 0px 15px;
     border-left: 1px solid #e8e8e8;
     color: #fff;
     line-height: 26px;
+    font-size: 15px;
 }
 
 .nav-sidebar{

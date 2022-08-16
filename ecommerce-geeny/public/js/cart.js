@@ -187,7 +187,7 @@ let renderSearchProducList = (arr = []) =>{
       </div>
       <div class="search-product-content">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
     </a>
     </li>`
@@ -232,7 +232,7 @@ let renderCartSideBarListProduct = (arr =[]) => {
     <div class="cart-sidebar-content">
       <div class="cart-sidebar-info">
         <h6>${p.name}</h6>
-        <p>${p.price}</p>
+        <p>${formatMoney(p.price)}</p>
       </div>
       <div class="cart-sidebar-action-group">
         <div class="product-action">
@@ -280,8 +280,8 @@ let renderCartListProduct = (arr = []) => {
     <div class="cart-info">
         <h6>${p.name}</h6>
         <div class="cart-price">
-            <p class="item-price">${p.price}</p>
-            <p class="item-price-total">${p.count*p.price}</p>
+            <p class="item-price">${formatMoney(p.price)}</p>
+            <p class="item-price-total">${formatMoney(p.count*p.price)}</p>
         </div>
         <div class="cart-action-group">
             <div class="cart-action">
@@ -348,7 +348,7 @@ let updateTotalMoneyCartSidebar = (arr =[]) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    totalMoneyCartSidebar.innerHTML = total
+    totalMoneyCartSidebar.innerHTML = formatMoney(total)
   } else {
     totalMoneyCartSidebar.style.display = "none"
   }
@@ -364,7 +364,7 @@ let updateTotalMoneyCartPage =(arr =[]) =>{
     let total = arr.reduce((t,p) =>{
       return t + p.count*p.price
     },0)
-    totalMoneyCartPage.innerHTML = total
+    totalMoneyCartPage.innerHTML = formatMoney(total)
   } else{
     cartOrderBill.style.display = "none"
   }

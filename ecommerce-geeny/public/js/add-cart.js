@@ -30,3 +30,7 @@ let addProductToCart = (item) =>{
     setDataCartToLocalStorage(cart) 
 }
 
+// formatMoney
+const formatMoney = number => {
+    return number.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+}

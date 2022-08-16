@@ -113,13 +113,13 @@
                     <a href="./shop.html">Quả</a>
                   </li>
                   <li>
+                    <a href="./shop.html">Củ</a>
+                  </li>
+                  <li>
+                    <a href="./shop.html">Thức Uống</a>
+                  </li>
+                  <li>
                     <a href="./shop.html">Thịt</a>
-                  </li>
-                  <li>
-                    <a href="./shop.html">Đồ Ăn Nhanh</a>
-                  </li>
-                  <li>
-                    <a href="./shop.html">Đồ Uống</a>
                   </li>
                 </ul>
               </li>
@@ -348,15 +348,15 @@
               </li>
               <li>
                 <span>-</span>
+                <a href="./shop.html">Củ</a>
+              </li>
+              <li>
+                <span>-</span>
+                <a href="./shop.html">Thức Uống</a>
+              </li>
+              <li>
+                <span>-</span>
                 <a href="./shop.html">Thịt</a>
-              </li>
-              <li>
-                <span>-</span>
-                <a href="./shop.html">Đồ ăn nhanh</a>
-              </li>
-              <li>
-                <span>-</span>
-                <a href="./shop.html">Đồ uống</a>
               </li>
             </ul>
           </li>
@@ -441,26 +441,30 @@
                         <h4>Phản Hồi Của Bạn</h4>
                         <div class="form-group">
                             <div class="form-group-input">
-                                <input type="text" placeholder="Tên">
+                                <input type="text" placeholder="Tên" id="username">
                                 <i class="fa-solid fa-user"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-group-input">
-                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Email" id="email">
                                 <i class="fa-solid fa-at"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-group-input">
-                                <input type="text" placeholder="Số Điện Thoại">
+                                <input type="text" placeholder="Số Điện Thoại" id="phone">
                                 <i class="fa-solid fa-mobile-screen-button"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-group-input">
-                                <input type="text" placeholder="Tin Nhắn">
+                                <input type="text" placeholder="Tin Nhắn" id="message">
                                 <i class="fa-solid fa-envelope"></i>
+                                <small>Error message</small>
                             </div>
                         </div>
                         <button type="submit" class="form-group-btn">
@@ -525,100 +529,100 @@
     </section>
 
     <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="footer-widget">
-                <a class="footer-logo" href="">
-                  <img src="../public/image/logo/logo.png" alt="">
-                </a>
-                <p>Tên công ty: CÔNG TY CỔ PHẦN ĐẦU TƯ ORGANICA</p>
-                <p>Mã Số thuế: 0311428380</p>
-                <ul class="footer-social">
-                  <li>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa-brands fa-pinterest-p"></i></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="footer-contact">
-                <h3 class="footer-title">Liên Hệ Chúng Tôi</h3>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-at"></i>
-                    <p>
-                      <span>support@example.com</span>
-                      <span>carrer@example.com</span>
-                    </p>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>
-                      <span>0336294777</span>
-                      <span>0336294777</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="footer-links">
-                <h3 class="footer-title">Đường Dẫn Nhanh</h3>
-                <a href="">Phạm Thị Mẫn - 0963023185</a>
-                <a href="">manpham@techmaster.vn</a>
-                <a href="">Dương Đức Thịnh - 0987273764</a>
-                <a href="">thinh@techmaster.vn</a>
-                <a href="">huong@techmaster.vn</a>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="footer-address">
-                <h3 class="footer-title">Địa chỉ</h3>
-                <p>Cơ sở 1: 14 ngõ 4, Nguyễn Đình Chiểu, Quận Hai Bà Trưng, Hà Nội</p>
-                <p>Cơ sở 2: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</p>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 col-xl-3 mb-4">
+            <div class="footer-widget">
+              <a class="footer-logo" href="">
+                <img src="../public/image/logo/logo.png" alt="">
+              </a>
+              <p>Tên công ty: CÔNG TY CỔ PHẦN ĐẦU TƯ ORGANICA</p>
+              <p>Mã Số thuế: 0311428380</p>
+              <ul class="footer-social">
+                <li>
+                  <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-pinterest-p"></i></i></a>
+                </li>
+              </ul>
             </div>
           </div>
-          
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="footer-bottom">
-                <p>
-                  © All Copyrights Reserved by 
-                  <a href="">Mironcoder</a>
-                </p>
-                <div class="footer-card">
-                  <a href="">
-                    <img src="../public/image/banner/payment-1.jpg" alt="">
-                  </a>
-                  <a href="">
-                    <img src="../public/image/banner/payment-2.jpg" alt="">
-                  </a>
-                  <a href="">
-                    <img src="../public/image/banner/payment-3.jpg" alt="">
-                  </a>
-                  <a href="">
-                    <img src="../public/image/banner/payment-4.jpg" alt="">
-                  </a>
-                </div>
+          <div class="col-sm-6 col-lg-3 col-xl-3 mb-4">
+            <div class="footer-contact">
+              <h3 class="footer-title">Liên Hệ Chúng Tôi</h3>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-at"></i>
+                  <p>
+                    <span>support@example.com</span>
+                    <span>carrer@example.com</span>
+                  </p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  <p>
+                    <span>0336294777</span>
+                    <span>0336294777</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 col-xl-3 mb-4">
+            <div class="footer-links">
+              <h3 class="footer-title">Đường Dẫn Nhanh</h3>
+              <a href="">Phạm Thị Mẫn - 0963023185</a>
+              <a href="">manpham@techmaster.vn</a>
+              <a href="">Dương Đức Thịnh - 0987273764</a>
+              <a href="">thinh@techmaster.vn</a>
+              <a href="">huong@techmaster.vn</a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 col-xl-3 mb-4">
+            <div class="footer-address">
+              <h3 class="footer-title">Địa chỉ</h3>
+              <p>Cơ sở 1: 14 ngõ 4, Nguyễn Đình Chiểu, Quận Hai Bà Trưng, Hà Nội</p>
+              <p>Cơ sở 2: Tầng 12A, tòa nhà Viwaseen Tower, số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer-bottom">
+              <p>
+                ©2016 Bản quyền thuộc về 
+                <a href="">Greeny</a>
+              </p>
+              <div class="footer-card">
+                <a href="">
+                  <img src="../public/image/banner/payment-1.jpg" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/image/banner/payment-2.jpg" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/image/banner/payment-3.jpg" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/image/banner/payment-4.jpg" alt="">
+                </a>
               </div>
             </div>
           </div>
         </div>
-    </div>
+      </div>
+  </div>
 
     <script src="../lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
