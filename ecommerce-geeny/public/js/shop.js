@@ -22,6 +22,28 @@ overlayEle.addEventListener('click',() =>{
   navSidebar.classList.remove('nav-sidebar-active')
 })
 
+// heart sidebar
+
+let headerHeart = document.querySelector(".header-wish")
+let heartSidebarClose = document.querySelector(".heart-sidebar-close")
+let heartSidebar = document.querySelector(".heart-sidebar")
+
+headerHeart.addEventListener("click",() =>{
+  heartSidebar.classList.add("heart-sidebar-active")
+  overlayEle.style.display = "block"
+})
+
+heartSidebarClose.addEventListener('click',() =>{
+  heartSidebar.classList.remove("heart-sidebar-active")
+  overlayEle.style.display = "none"
+})
+
+overlayEle.addEventListener('click',() =>{
+  heartSidebar.classList.remove("heart-sidebar-active")
+  overlayEle.style.display = "none"
+  navSidebar.classList.remove('nav-sidebar-active')
+})
+
 // nav-sidebar
 
 let navSidebarBtn = document.querySelector('.btn-nav-sidebar')
@@ -227,7 +249,7 @@ let renderProductShop = (arr = []) =>{
             <div class="product-label">
               <label>${p.tag}</label>
             </div>
-            <div class="product-wish">
+            <div class="product-wish" onclick="addProductShopToHeart(${p.id})">
               <i class="fa-solid fa-heart"></i>
             </div>
             <a href="./deital.html?id=${p.id}">
@@ -461,6 +483,72 @@ selectOptionEle.addEventListener("change", (e) =>{
   } 
 })
 
+
+// add product shop to heart-sidebar
+let addProductShopToHeart = (id) =>{
+  let product = products.find(p => p.id == id)
+  let item ={
+    id: product.id,
+    name: product.name,
+    price: product.price,
+    image: product.images[0],
+    count: 1
+  }
+
+  addProductToHeart(item)
+  alert("Thêm vào sản phẩm yêu thích thành công")
+  let productHeartSideBar = getDataHeartFromLocalStorage()
+  renderHeartSidebarListProduct(productHeartSideBar)
+  updateTotalHeartSidebar()
+}
+
+// render product heart-sidebar
+let productHeartSideBar = getDataHeartFromLocalStorage()
+let heartSideBarListEle = document.querySelector(".heart-sidebar-list")
+
+let renderHeartSidebarListProduct = (arr = []) =>{
+  heartSideBarListEle.innerHTML = ""
+  let html = ""
+  if(arr.length == 0) {
+    heartSideBarListEle.innerHTML = "Chưa có sản phẩm"
+    return
+  }
+
+  arr.forEach((p) =>{
+    html +=`<li class="heart-sidebar-item">
+    <div class="heart-sidebar-image">
+      <a href="../page/deital.html?id=${p.id}">
+        <img src=${p.image} alt="">
+      </a>
+    </div>
+    <div class="heart-sidebar-content">
+      <div class="heart-sidebar-info">
+        <h6>${p.name}</h6>
+        <p>${formatMoney(p.price)}</p>
+      </div>
+      <div class="heart-sidebar-action-group">
+        <button class="action-delete" onclick="removeProductHeart(${p.id})">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </li>`
+  })
+
+  heartSideBarListEle.innerHTML = html
+}
+
+renderHeartSidebarListProduct(getDataHeartFromLocalStorage())
+
+// remove item heart-sidebar
+let removeProductHeart = (id) =>{
+  let items = getDataHeartFromLocalStorage()
+  let itemsNew = items.filter(p => p.id != id)
+  setDataHeartToLocalStorage(itemsNew)
+  renderHeartSidebarListProduct(itemsNew)
+  updateTotalHeartSidebar()
+}
+
 // add productShop to cart-sidebar
 let addProductShop = (id) =>{
   let product = products.find(p => p.id == id)
@@ -579,8 +667,15 @@ let updateTotalCartSidebar = () =>{
   document.querySelector(".header-cart-number p").innerHTML = cart.length
 }
 
+let updateTotalHeartSidebar = () =>{
+  let heart = getDataHeartFromLocalStorage()
+  document.querySelector(".heart-sidebar-total span").innerHTML = heart.length
+  document.querySelector(".header-heart-number p").innerHTML = heart.length
+}
+
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+updateTotalHeartSidebar()
 
 // venobox
 new VenoBox({

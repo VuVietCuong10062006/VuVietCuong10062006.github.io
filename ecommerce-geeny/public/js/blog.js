@@ -21,6 +21,29 @@ overlayEle.addEventListener('click',() =>{
   overlayEle.style.display = "none"
   navSidebar.classList.remove('nav-sidebar-active')
 })
+
+// heart sidebar
+
+let headerHeart = document.querySelector(".header-wish")
+let heartSidebarClose = document.querySelector(".heart-sidebar-close")
+let heartSidebar = document.querySelector(".heart-sidebar")
+
+headerHeart.addEventListener("click",() =>{
+  heartSidebar.classList.add("heart-sidebar-active")
+  overlayEle.style.display = "block"
+})
+
+heartSidebarClose.addEventListener('click',() =>{
+  heartSidebar.classList.remove("heart-sidebar-active")
+  overlayEle.style.display = "none"
+})
+
+overlayEle.addEventListener('click',() =>{
+  heartSidebar.classList.remove("heart-sidebar-active")
+  overlayEle.style.display = "none"
+  navSidebar.classList.remove('nav-sidebar-active')
+})
+
 // nav-sidebar
 
 let navSidebarBtn = document.querySelector('.btn-nav-sidebar')
@@ -207,6 +230,52 @@ let searchProductHeader = () =>{
   renderSearchProducList(productFilter)
 }
 
+// render product heart-sidebar
+let productHeartSideBar = getDataHeartFromLocalStorage()
+let heartSideBarListEle = document.querySelector(".heart-sidebar-list")
+
+let renderHeartSidebarListProduct = (arr = []) =>{
+  heartSideBarListEle.innerHTML = ""
+  let html = ""
+  if(arr.length == 0) {
+    heartSideBarListEle.innerHTML = "Chưa có sản phẩm"
+    return
+  }
+
+  arr.forEach((p) =>{
+    html +=`<li class="heart-sidebar-item">
+    <div class="heart-sidebar-image">
+      <a href="../page/deital.html?id=${p.id}">
+        <img src=${p.image} alt="">
+      </a>
+    </div>
+    <div class="heart-sidebar-content">
+      <div class="heart-sidebar-info">
+        <h6>${p.name}</h6>
+        <p>${formatMoney(p.price)}</p>
+      </div>
+      <div class="heart-sidebar-action-group">
+        <button class="action-delete" onclick="removeProductHeart(${p.id})">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </li>`
+  })
+
+  heartSideBarListEle.innerHTML = html
+}
+
+renderHeartSidebarListProduct(getDataHeartFromLocalStorage())
+
+// remove item heart-sidebar
+let removeProductHeart = (id) =>{
+  let items = getDataHeartFromLocalStorage()
+  let itemsNew = items.filter(p => p.id != id)
+  setDataHeartToLocalStorage(itemsNew)
+  renderHeartSidebarListProduct(itemsNew)
+  updateTotalHeartSidebar()
+}
 
 // render product cart-sidebar
 let productCartSideBar = getDataCartFromLocalStorage()
@@ -307,8 +376,15 @@ let updateTotalCartSidebar = () =>{
   document.querySelector(".header-cart-number p").innerHTML = cart.length
 }
 
+let updateTotalHeartSidebar = () =>{
+  let heart = getDataHeartFromLocalStorage()
+  document.querySelector(".heart-sidebar-total span").innerHTML = heart.length
+  document.querySelector(".header-heart-number p").innerHTML = heart.length
+}
+
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+updateTotalHeartSidebar()
 
 // tìm kiếm bài viết
 
@@ -316,10 +392,6 @@ let blogTitlesEle = document.querySelectorAll(".blogs-content h4")
 let searchBlogInput = document.querySelector(".blogs-widget-form input")
 let buttonSearchBlog = document.querySelector(".blogs-widget-form button")
 let blogsEle = document.querySelectorAll(".blogs-card")
-console.log(buttonSearchBlog)
-// let blogTltleTexts = Array.from(blogTitlesEle).map((b) =>{
-//   return b.innerHTML
-// })
 
 buttonSearchBlog.addEventListener("click",(e) =>{
   e.preventDefault()
@@ -331,7 +403,6 @@ buttonSearchBlog.addEventListener("click",(e) =>{
 
 let searchBlogs = () =>{
   let inputValue = searchBlogInput.value
-  console.log(inputValue)
   let blogsFilter = Array.from(blogTitlesEle).filter(p => p.innerHTML.toLowerCase().includes(inputValue.toLowerCase()))
   blogsFilter.forEach((e) =>{
     e.parentNode.parentNode.style.display = "block"

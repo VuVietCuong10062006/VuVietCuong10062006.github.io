@@ -309,6 +309,27 @@
     position: relative;
 }
 
+.header-heart-number{
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #119744;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -10px;
+    right: -10px;
+}
+
+.header-heart-number p{
+    margin: 0;
+    font-size: 12px;
+}
+
 .header-cart-number{
     width: 24px;
     height: 24px;
@@ -686,6 +707,159 @@
     font-size: 15px;
 }
 
+/* heart -sidebar */
+.heart-sidebar{
+    position: fixed;
+    top: 0;
+    right: -450px;
+    /* right: 0; */
+    width: 400px;
+    height: 100vh;
+    z-index: 5;
+    background-color: #fff;
+    transition: all linear 0.3s;
+}
+
+.heart-sidebar-active{
+    right: 0;
+}
+
+.heart-sidebar-header{
+    padding: 18px 25px;
+    position: relative;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+.heart-sidebar-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-sidebar-total i{
+    font-size: 20px;
+    margin-right: 8px;
+    color: #119744;
+}
+
+.heart-sidebar-total p{
+    margin: 0;
+    line-height: 26px;
+    color: #119744;
+}
+
+.heart-sidebar-close{
+    position: absolute;
+    top: 20%;
+    left: -20px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+.heart-sidebar-close i{
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    line-height: 35px;
+    border-radius: 50%;
+    color: #555555;
+    transition: all linear 0.3s;
+}
+
+.heart-sidebar-close i:hover{
+    color: #fff;
+    background-color: #119744;
+}
+
+.heart-sidebar-list{
+    padding: 0 15px;
+    margin: 0;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.heart-sidebar-item{
+    padding: 15px 0;
+    display: flex;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.heart-sidebar-image{
+    margin-right: 25px;
+}
+
+.heart-sidebar-image img{
+    width: 100px;
+    border-radius: 8px;
+}
+
+.heart-sidebar-content{
+    flex: 1;
+}
+
+.heart-sidebar-info{
+    margin-bottom: 10px;
+}
+
+.heart-sidebar-info h6{
+    text-transform: capitalize;
+    color: #39404a;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.heart-sidebar-info p{
+    font-size: 14px;
+    line-height: 26px;
+    color: #555555;
+    margin: 0;
+}
+
+.heart-sidebar-action-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-sidebar-action-group button{
+    border: none;
+    background: none;
+}
+
+.heart-sidebar-action-group button i{
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #555555;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.3s;
+}
+
+.heart-sidebar-action-group button i:hover{
+    background-color: #119744;
+    color: #fff;
+}
+
+.heart-sidebar-action-group .action-delete i{
+    color: #e86121;
+    transition: all linear 0.3s;
+}
+
+/* nav sidebar */
 .nav-sidebar{
     position: fixed;
     top: 0;
@@ -1911,18 +2085,70 @@
     }
 
     .cart-sidebar-checkout-price{
-        font-size: 13px;
-        padding: 0 15px;
+        font-size: 11px;
+        padding: 0 10px;
     }
     .cart-sidebar-checkout{
         padding: 5px;
     }
 
     .cart-sidebar-cartpage{
-        margin-left: 10px;
+        margin-left: 5px;
         padding: 5px;
     }
 
+    .header-cart-number{
+        width: 20px;
+        height: 20px;
+    }
+
+    .cart-sidebar-info h6{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .cart-sidebar-info p{
+        font-size: 13px;
+    }
+
+    .header-cart-number p{
+        font-size: 8px;
+    }
+
+    /* heart sidebar */
+    .heart-sidebar{
+        width: 300px;
+    }
+
+    .heart-sidebar-action-group button i{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 10px;
+    }
+
+    .heart-sidebar-image{
+        margin-right: 15px;
+    }
+
+    .header-heart-number{
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-heart-number p{
+        font-size: 8px;
+    }
+
+    .heart-sidebar-info h6{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .heart-sidebar-info p{
+        font-size: 13px;
+    }
+    
     /* banner */
     .banner-content h1{
         font-size: 32px;
