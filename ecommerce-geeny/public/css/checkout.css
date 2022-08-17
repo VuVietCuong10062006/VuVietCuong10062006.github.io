@@ -239,6 +239,23 @@
     margin-top: 30px;
 }
 
+.checkout .payments .radio-wrapper{
+    display: flex;
+}
+
+.checkout .payments label{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout .payments label img{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
 .checkout .payments h2{
     color: #39404a;
 }
@@ -293,6 +310,33 @@
     .checkout-order{
         padding: 0;
         margin-bottom: 40px;
+    }
+
+    .order-product-name{
+        font-size: 14px;
+    }
+
+    .order-product-image{
+        margin-right: 15px;
+    }
+
+    .order-product-content p{
+        font-size: 14px;
+    }
+
+    .order-product-image img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .order-product-number{
+        width: 20px;
+        height: 20px;
+        font-size: 8px;
+    }
+
+    .order-bill .bill-total{
+        font-size: 18px;
     }
 
     .checkout-info{

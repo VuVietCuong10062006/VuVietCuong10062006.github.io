@@ -309,3 +309,31 @@ let updateTotalCartSidebar = () =>{
 
 renderCartSideBarListProduct(productCartSideBar)
 updateTotalCartSidebar()
+
+// tìm kiếm bài viết
+
+let blogTitlesEle = document.querySelectorAll(".blogs-content h4")
+let searchBlogInput = document.querySelector(".blogs-widget-form input")
+let buttonSearchBlog = document.querySelector(".blogs-widget-form button")
+let blogsEle = document.querySelectorAll(".blogs-card")
+console.log(buttonSearchBlog)
+// let blogTltleTexts = Array.from(blogTitlesEle).map((b) =>{
+//   return b.innerHTML
+// })
+
+buttonSearchBlog.addEventListener("click",(e) =>{
+  e.preventDefault()
+  Array.from(blogsEle).forEach((b) =>{
+    b.style.display = "none"
+  })
+  searchBlogs()
+})
+
+let searchBlogs = () =>{
+  let inputValue = searchBlogInput.value
+  console.log(inputValue)
+  let blogsFilter = Array.from(blogTitlesEle).filter(p => p.innerHTML.toLowerCase().includes(inputValue.toLowerCase()))
+  blogsFilter.forEach((e) =>{
+    e.parentNode.parentNode.style.display = "block"
+  })
+}
