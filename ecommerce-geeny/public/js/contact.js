@@ -55,6 +55,16 @@ navSidebarBtn.addEventListener('click',() =>{
   overlayEle.style.display = "block"
 })
 
+// nav active
+let navActivepage = window.location.pathname
+let navLink = document.querySelectorAll(".nav-link")
+
+Array.from(navLink).forEach((link) =>{
+  if(link.href.includes(navActivepage)){
+    link.classList.add("nav-active")
+  }
+})
+
 // render User
 const getDataInfoUserFromLocalStorage = () => {
   const localStorageValue = localStorage.getItem("infoUser");

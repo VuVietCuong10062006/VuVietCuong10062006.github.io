@@ -398,9 +398,19 @@
     position: relative;
 }
 
+.navbar-item.navbar-item-active a{
+    color: #119744;
+}
+
 .navbar-item a{
     color: #555555;
     font-weight: 500;
+    padding: 0;
+}
+
+.navbar-item .nav-active{
+    color: #119744;
+    border-bottom: 2px solid #119744;
 }
 
 .navbar-item a:hover{
