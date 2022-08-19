@@ -143,7 +143,7 @@ let products =[
         rating : 2,
         voted : 9,
         description : "Hành lá giàu chất xơ giúp tiêu hóa tốt hơn. Hành lá giàu vitamin C và vitamin A",
-        tag : "Rating",
+        tag : "Sale",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/29/13454-965921659084305-1659084305--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/19/9003-237501624078639-1624078639--400x400.png",
@@ -160,7 +160,7 @@ let products =[
         rating : 4,
         voted : 8,
         description : "Bông cải xanh là chứa nhiều vitamin và khoáng chất và đặc biệt giàu protein hơn phần lớn các loại rau củ khác",
-        tag : "Rating",
+        tag : "Sale",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/19/8956-734081624075122-1624075122--400x400.jpg",
