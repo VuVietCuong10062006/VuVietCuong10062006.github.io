@@ -349,7 +349,7 @@ let renderProductSell = (arr = []) =>{
           <i class="${p.rating >=3 ?'active' :''} fa-solid fa-star"></i>
           <i class="${p.rating >=4 ?'active' :''} fa-solid fa-star"></i>
           <i class="${p.rating >=5 ?'active' :''} fa-solid fa-star"></i>
-          <a href="">(3)</a>
+          <a href="">(${p.voted})</a>
         </div>
         <h6 class="product-name">${p.name}</h6>
         <h6 class="product-price">${formatMoney(p.price)}</h6>
@@ -407,7 +407,7 @@ let renderProductFeature = (arr = []) =>{
           <i class="${p.rating >=3 ?'active' :''} fa-solid fa-star"></i>
           <i class="${p.rating >=4 ?'active' :''} fa-solid fa-star"></i>
           <i class="${p.rating >=5 ?'active' :''} fa-solid fa-star"></i>
-          <a href="">(3)</a>
+          <a href="">(${p.voted})</a>
         </div>
         <h6 class="feature-price">${formatMoney(p.price)}</h6>
         <p class="feature-desc">

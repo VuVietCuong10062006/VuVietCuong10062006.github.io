@@ -245,6 +245,11 @@ let productPrice = document.querySelector(".details-price")
 let productDesc = document.querySelector(".details-desc")
 
 let product = products.find(p => p.id == id)
+document.title = product.name
+let breadcrumbItemActive = document.querySelector(".shop-banner .content")
+breadcrumbItemActive.insertAdjacentHTML("beforeend",`<li class="content-item active">${product.name}</li>`)
+console.log(breadcrumbItemActive)
+
 
 // hiển thị thông tin
 let renderProduct = (obj) =>{
