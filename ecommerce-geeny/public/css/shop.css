@@ -9,6 +9,11 @@
     margin-bottom: 100px;
 }
 
+.pagination-page-list{
+    display: flex;
+    padding: 0;
+}
+
 .shop-banner::before{
     position: absolute;
     content: "";
