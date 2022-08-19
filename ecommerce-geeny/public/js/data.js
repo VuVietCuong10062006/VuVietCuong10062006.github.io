@@ -140,10 +140,10 @@ let products =[
         id : 9,
         name : "Hành lá hữu cơ",
         price : 21000,
-        rating : 4,
+        rating : 2,
         voted : 9,
         description : "Hành lá giàu chất xơ giúp tiêu hóa tốt hơn. Hành lá giàu vitamin C và vitamin A",
-        tag : "Sale",
+        tag : "Rating",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/29/13454-965921659084305-1659084305--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/19/9003-237501624078639-1624078639--400x400.png",
@@ -160,7 +160,7 @@ let products =[
         rating : 4,
         voted : 8,
         description : "Bông cải xanh là chứa nhiều vitamin và khoáng chất và đặc biệt giàu protein hơn phần lớn các loại rau củ khác",
-        tag : "Sale",
+        tag : "Rating",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/19/8956-734081624075122-1624075122--400x400.jpg",
@@ -310,7 +310,7 @@ let products =[
         id : 19,
         name : "Bưởi năm roi",
         price : 80000,
-        rating : 4,
+        rating : 2,
         voted : 6,
         description : "Bưởi giàu hàm lượng vitamin C cùng chất chống oxy hóa, có khả năng bảo vệ tế bào",
         tag : "New",
@@ -381,7 +381,7 @@ let products =[
         rating : 4,
         voted : 6,
         description : "Sữa Hạnh nhân Koita được làm từ những hạt hạnh nhân hữu cơ không biến đổi gen và thuốc trừ sâu",
-        tag : "New",
+        tag : "Discount",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/14/12894-985261657773671-1657773671--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/28/9372-756431624875922-1624875922--400x400.png",
@@ -398,7 +398,7 @@ let products =[
         rating : 1,
         voted : 1,
         description : "Dùng trực tiếp, hoặc thêm vào ngũ cốc, hay làm nguyên liệu pha chế các thức uống khác",
-        tag : "New",
+        tag : "Discount",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/28/13316-493231659008294-1659008294--400x400.png",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/July/6/9718-354821625563053-1625563053--400x400.png",
@@ -415,7 +415,7 @@ let products =[
         rating : 5,
         voted : 8,
         description : "Nước, Yến mạch hữu cơ (16%).Thức uống không chứa lactose và phù hợp với người ăn chay",
-        tag : "New",
+        tag : "Discount",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/14/12920-803861657779944-1657779944--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/28/9361-935011624874372-1624874372--400x400.png",
@@ -432,7 +432,7 @@ let products =[
         rating : 3,
         voted : 4,
         description : "Lắc đều trước khi dùng. Mỗi ngày dùng trực tiếp 100ml, có thể pha loãng với chút đá viên",
-        tag : "New",
+        tag : "Discount",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/22/13107-168921658474639-1658474640--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/30/9489-986921625023867-1625023867--400x400.png",
@@ -449,7 +449,7 @@ let products =[
         rating : 2,
         voted : 3,
         description : "Nghệ là một trong những gia vị quen thuộc trong nấu ăn. Nghệ có chứa nhiều dưỡng chất, đặc biệt là curcumin",
-        tag : "New",
+        tag : "Discount",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/19/12994-547961658203061-1658203061--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/18/8819-662521624007080-1624007080--400x400.png",
@@ -466,7 +466,7 @@ let products =[
         rating : 1,
         voted : 2,
         description : "Ăn cà rốt chứa vitamin A, vitamin C, carotenoid, kali và các chất chống oxy hoá",
-        tag : "New",
+        tag : "Rating",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/29/13426-550631659083074-1659083074--400x400.png",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/18/8832-732061624007760-1624007760--400x400.jpg",
@@ -483,7 +483,7 @@ let products =[
         rating : 3,
         voted : 6,
         description : "Củ dền mang lại nhiều lợi ích tuyệt vời cho sức khỏe: chứa chất chống oxy hóa, giảm viêm",
-        tag : "New",
+        tag : "Rating",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/22/13132-475691658483798-1658483798--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/18/8847-453241624008109-1624008109--400x400.jpg",
@@ -500,7 +500,7 @@ let products =[
         rating : 1,
         voted : 4,
         description : "Củ cải trắng không chỉ là một món ăn phổ biến, mà còn được biết tới như loại thần dược không thua kém gì nhân sâm",
-        tag : "New",
+        tag : "Rating",
         images : [
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/29/13327-532481659062144-1659062144--400x400.jpg",
             "https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2021/June/18/8835-674221624007818-1624007818--400x400.jpg",

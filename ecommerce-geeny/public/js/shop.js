@@ -421,6 +421,14 @@ Array.from(inputTags).forEach((input) =>{
   })
 })
 
+// render numberTag
+let numbertagEle = document.querySelectorAll(".shop-widget-list-tag span")
+Array.from(numbertagEle).forEach((e) =>{
+  let nameTag = e.parentNode.querySelector("input").value
+  let nameTagProduct = products.filter((p) => p.tag == nameTag)
+  e.innerHTML = `(${nameTagProduct.length})`
+})
+
 // filter by category
 let inputCategorys = document.querySelectorAll(".checkbox-category")
 let productFilterCategory = []
@@ -449,6 +457,14 @@ Array.from(inputCategorys).forEach((input) =>{
   })
 })
 
+// render numberCategory
+let numberCategoryEle = document.querySelectorAll(".shop-widget-list-category span")
+Array.from(numberCategoryEle).forEach((e) =>{
+  let nameCategory = e.parentNode.querySelector("input").value
+  let nameCategoryProduct = products.filter((p) => p.category == nameCategory)
+  e.innerHTML = `(${nameCategoryProduct.length})`
+})
+
 // filter by rating
 let inputRating = document.querySelectorAll(".checkbox-rating")
 let productFilterRating = []
@@ -475,6 +491,13 @@ Array.from(inputRating).forEach((input) =>{
       renderProductShop(products)
     }
   })
+})
+
+// render numberRating
+let numberRatingEle = document.querySelectorAll(".shop-widget-list-rating span")
+Array.from(numberRatingEle).forEach((e,i) =>{
+  let numberRating = products.filter(p => p.rating == 5-i)
+  e.innerHTML = `(${numberRating.length})`
 })
 
 // select option 

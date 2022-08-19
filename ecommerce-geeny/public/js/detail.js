@@ -243,6 +243,8 @@ let productId = document.querySelector(".details-id")
 let productBrand = document.querySelector(".details-brand")
 let productPrice = document.querySelector(".details-price")
 let productDesc = document.querySelector(".details-desc")
+let numberRating = document.querySelector('.details-rating a')
+
 
 let product = products.find(p => p.id == id)
 document.title = product.name
@@ -257,6 +259,7 @@ let renderProduct = (obj) =>{
   productId.innerHTML = obj.id
   productPrice.innerHTML = formatMoney(obj.price)
   productDesc.innerHTML = obj.description
+  numberRating.innerHTML = `${obj.voted} reviews`
 }
 
 renderProduct(product)
